@@ -9,7 +9,7 @@
       margin: 0;
       padding: 0;
       height: 100%;
-      overflow-y: auto; /* Enable vertical scrolling */
+      overflow-y: scroll; /* Enable vertical scrolling */
     }
 
     body {
@@ -136,72 +136,66 @@
         padding: 10px 0;
       }
     }
+
     .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  justify-items: center;
-  max-width: 100%; /* Prevents the container from overflowing */
-  margin: 0 auto;  /* Center the container */
-}
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      justify-items: center;
+      max-width: 100%; /* Prevents the container from overflowing */
+      margin: 0 auto;  /* Center the container */
+    }
 
-.image-box {
-  position: relative;
-  width: 100%;
-  max-width: 300px;
-  height: auto;       /* Let the height adapt to the image */
-  opacity: 0;
-  transform: translateY(100px);
-  animation: slideUp 1s forwards ease-out;
-}
+    .image-box {
+      position: relative;
+      width: 100%;
+      max-width: 300px;
+      height: auto;       /* Let the height adapt to the image */
+      opacity: 0;
+      transform: translateY(100px);
+      animation: slideUp 1s forwards ease-out;
+    }
 
-.image-box img {
-  width: 100%;
-  height: auto;       /* Maintain image aspect ratio */
-  object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
+    .image-box img {
+      width: 100%;
+      height: auto;       /* Maintain image aspect ratio */
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
 
-.image-box:hover img {
-  transform: translateY(-10px);
-  box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.6);
-}
+    .image-box:hover img {
+      transform: translateY(-10px);
+      box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.6);
+    }
 
-@keyframes slideUp {
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
+    @keyframes slideUp {
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
 
-/* Optional: Tweak layout for small screens */
-@media (max-width: 600px) {
-  .container {
-    grid-template-columns: 1fr; /* Single column layout for smaller screens */
-  }
-}
-s
-          /* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;  /* Adjust the width for a thicker scrollbar */
-}
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 12px;  /* Adjust the width for a thicker scrollbar */
+    }
 
-::-webkit-scrollbar-track {
-  background: rgba(255, 192, 203, 0);  /* Ensure track is transparent */
-  border-radius: 0px;  /* Rounded corners for the track */
+    ::-webkit-scrollbar-track {
+      background: rgba(255, 192, 203, 0);  /* Transparent track */
+      border-radius: 10px;  /* Rounded corners for the track */
+    }
 
-}
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(45deg, #00aeff, #a68eff);  /* Gradient color for the thumb */
+      border-radius: 10px;  /* Rounded corners for the thumb */
+    }
 
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #00aeff, #a68eff);  /* Gradient color for the thumb */
-  border-radius: 10px;  /* Rounded corners for the thumb */
-}
+    ::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(45deg, #00aeff, #8c74d6);  /* Slightly darker gradient on hover */
+    }
 
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(45deg, #00aeff, #8c74d6);  /* Slightly darker gradient on hover */
-}
   </style>
 </head>
 <body>
@@ -221,102 +215,62 @@ s
 
   <div class="container">
     <div class="image-box">
-      <img src="https://miro.medium.com/v2/resize:fit:1200/1*V-Jp13LvtVc2IiY2fp4qYw.jpeg" alt="Image 1">
-    </div>
-    <div class="image-box">
+      <img src="https://embracemultigraphicsinc.com/wp-content/uploads/2023/03/best-mobile-app-development-companies.png" alt="Image 2">
+    </div>  <div class="image-box">
+      <img src="https://embracemultigraphicsinc.com/wp-content/uploads/2023/03/best-mobile-app-development-companies.png" alt="Image 2">
+    </div>  <div class="image-box">
+      <img src="https://embracemultigraphicsinc.com/wp-content/uploads/2023/03/best-mobile-app-development-companies.png" alt="Image 2">
+    </div>  <div class="image-box">
+      <img src="https://embracemultigraphicsinc.com/wp-content/uploads/2023/03/best-mobile-app-development-companies.png" alt="Image 2">
+    </div>  <div class="image-box">
+      <img src="https://embracemultigraphicsinc.com/wp-content/uploads/2023/03/best-mobile-app-development-companies.png" alt="Image 2">
+    </div>  <div class="image-box">
+      <img src="https://embracemultigraphicsinc.com/wp-content/uploads/2023/03/best-mobile-app-development-companies.png" alt="Image 2">
+    </div>  <div class="image-box">
+      <img src="https://embracemultigraphicsinc.com/wp-content/uploads/2023/03/best-mobile-app-development-companies.png" alt="Image 2">
+    </div>  <div class="image-box">
+      <img src="https://embracemultigraphicsinc.com/wp-content/uploads/2023/03/best-mobile-app-development-companies.png" alt="Image 2">
+    </div>  <div class="image-box">
+      <img src="https://embracemultigraphicsinc.com/wp-content/uploads/2023/03/best-mobile-app-development-companies.png" alt="Image 2">
+    </div>  <div class="image-box">
+      <img src="https://embracemultigraphicsinc.com/wp-content/uploads/2023/03/best-mobile-app-development-companies.png" alt="Image 2">
+    </div>  <div class="image-box">
+      <img src="https://embracemultigraphicsinc.com/wp-content/uploads/2023/03/best-mobile-app-development-companies.png" alt="Image 2">
+    </div>  <div class="image-box">
+      <img src="https://embracemultigraphicsinc.com/wp-content/uploads/2023/03/best-mobile-app-development-companies.png" alt="Image 2">
+    </div>  <div class="image-box">
+      <img src="https://embracemultigraphicsinc.com/wp-content/uploads/2023/03/best-mobile-app-development-companies.png" alt="Image 2">
+    </div>  <div class="image-box">
+      <img src="https://embracemultigraphicsinc.com/wp-content/uploads/2023/03/best-mobile-app-development-companies.png" alt="Image 2">
+    </div>  <div class="image-box">
+      <img src="https://embracemultigraphicsinc.com/wp-content/uploads/2023/03/best-mobile-app-development-companies.png" alt="Image 2">
+    </div>  <div class="image-box">
+      <img src="https://embracemultigraphicsinc.com/wp-content/uploads/2023/03/best-mobile-app-development-companies.png" alt="Image 2">
+    </div>  <div class="image-box">
+      <img src="https://embracemultigraphicsinc.com/wp-content/uploads/2023/03/best-mobile-app-development-companies.png" alt="Image 2">
+    </div>  <div class="image-box">
+      <img src="https://embracemultigraphicsinc.com/wp-content/uploads/2023/03/best-mobile-app-development-companies.png" alt="Image 2">
+    </div>  <div class="image-box">
+      <img src="https://embracemultigraphicsinc.com/wp-content/uploads/2023/03/best-mobile-app-development-companies.png" alt="Image 2">
+    </div>  <div class="image-box">
+      <img src="https://embracemultigraphicsinc.com/wp-content/uploads/2023/03/best-mobile-app-development-companies.png" alt="Image 2">
+    </div>  <div class="image-box">
+      <img src="https://embracemultigraphicsinc.com/wp-content/uploads/2023/03/best-mobile-app-development-companies.png" alt="Image 2">
+    </div>  <div class="image-box">
+      <img src="https://embracemultigraphicsinc.com/wp-content/uploads/2023/03/best-mobile-app-development-companies.png" alt="Image 2">
+    </div>  <div class="image-box">
+      <img src="https://embracemultigraphicsinc.com/wp-content/uploads/2023/03/best-mobile-app-development-companies.png" alt="Image 2">
+    </div>  <div class="image-box">
+      <img src="https://embracemultigraphicsinc.com/wp-content/uploads/2023/03/best-mobile-app-development-companies.png" alt="Image 2">
+    </div>  <div class="image-box">
+      <img src="https://embracemultigraphicsinc.com/wp-content/uploads/2023/03/best-mobile-app-development-companies.png" alt="Image 2">
+    </div>  <div class="image-box">
+      <img src="https://embracemultigraphicsinc.com/wp-content/uploads/2023/03/best-mobile-app-development-companies.png" alt="Image 2">
+    </div>  <div class="image-box">
+      <img src="https://embracemultigraphicsinc.com/wp-content/uploads/2023/03/best-mobile-app-development-companies.png" alt="Image 2">
+    </div>  <div class="image-box">
       <img src="https://embracemultigraphicsinc.com/wp-content/uploads/2023/03/best-mobile-app-development-companies.png" alt="Image 2">
     </div>
-    <div class="image-box">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVqsJqWZZ4GfN3JdIi3qAndrqoYn_FSv3dpQ&s" alt="Image 3">
-    </div>
-    <div class="image-box">
-      <img src="https://itrexgroup.com/wp-content/uploads/2024/08/game-development-services-3.jpg" alt="Image 4">
-    </div>
-    <div class="image-box">
-      <img src="https://outranking.s3.amazonaws.com/934231_Monique%20Dahito/57388180/2023-10-17T01%3A21%3A54.043368_91ec2bdd-aa31-4ba8-94a1-0e04bd495016" alt="Image 5">
-    </div>
-    <div class="image-box">
-      <img src="https://media.excellentwebworld.com/wp-content/uploads/2022/03/17091451/best-api-development-services.webp" alt="Image 6">
-    </div>
-    <div class="image-box">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxFvjPQUsf8pRbG4hn6KU85EcZ0fBu4uH3QQ&s" alt="Image 7">
-    </div>
-    <div class="image-box">
-      <img src="https://media.licdn.com/dms/image/v2/D4D12AQEOM6rzHopGmA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1697112235781?e=2147483647&v=beta&t=-fVMrsO-OOCPIPuOfIH9A3LIPQJff_L_MUnm0UjsB5s" alt="Image 8">
-    </div>
-      <div class="image-box">
-      <img src="https://miro.medium.com/v2/resize:fit:1200/1*V-Jp13LvtVc2IiY2fp4qYw.jpeg" alt="Image 1">
-    </div>
-    <div class="image-box">
-      <img src="https://embracemultigraphicsinc.com/wp-content/uploads/2023/03/best-mobile-app-development-companies.png" alt="Image 2">
-    </div>
-    <div class="image-box">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVqsJqWZZ4GfN3JdIi3qAndrqoYn_FSv3dpQ&s" alt="Image 3">
-    </div>
-    <div class="image-box">
-      <img src="https://itrexgroup.com/wp-content/uploads/2024/08/game-development-services-3.jpg" alt="Image 4">
-    </div>
-    <div class="image-box">
-      <img src="https://outranking.s3.amazonaws.com/934231_Monique%20Dahito/57388180/2023-10-17T01%3A21%3A54.043368_91ec2bdd-aa31-4ba8-94a1-0e04bd495016" alt="Image 5">
-    </div>
-    <div class="image-box">
-      <img src="https://media.excellentwebworld.com/wp-content/uploads/2022/03/17091451/best-api-development-services.webp" alt="Image 6">
-    </div>
-    <div class="image-box">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxFvjPQUsf8pRbG4hn6KU85EcZ0fBu4uH3QQ&s" alt="Image 7">
-    </div>
-    <div class="image-box">
-      <img src="https://media.licdn.com/dms/image/v2/D4D12AQEOM6rzHopGmA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1697112235781?e=2147483647&v=beta&t=-fVMrsO-OOCPIPuOfIH9A3LIPQJff_L_MUnm0UjsB5s" alt="Image 8">
-    </div>
-      <div class="image-box">
-      <img src="https://miro.medium.com/v2/resize:fit:1200/1*V-Jp13LvtVc2IiY2fp4qYw.jpeg" alt="Image 1">
-    </div>
-    <div class="image-box">
-      <img src="https://embracemultigraphicsinc.com/wp-content/uploads/2023/03/best-mobile-app-development-companies.png" alt="Image 2">
-    </div>
-    <div class="image-box">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVqsJqWZZ4GfN3JdIi3qAndrqoYn_FSv3dpQ&s" alt="Image 3">
-    </div>
-    <div class="image-box">
-      <img src="https://itrexgroup.com/wp-content/uploads/2024/08/game-development-services-3.jpg" alt="Image 4">
-    </div>
-    <div class="image-box">
-      <img src="https://outranking.s3.amazonaws.com/934231_Monique%20Dahito/57388180/2023-10-17T01%3A21%3A54.043368_91ec2bdd-aa31-4ba8-94a1-0e04bd495016" alt="Image 5">
-    </div>
-    <div class="image-box">
-      <img src="https://media.excellentwebworld.com/wp-content/uploads/2022/03/17091451/best-api-development-services.webp" alt="Image 6">
-    </div>
-    <div class="image-box">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxFvjPQUsf8pRbG4hn6KU85EcZ0fBu4uH3QQ&s" alt="Image 7">
-    </div>
-    <div class="image-box">
-      <img src="https://media.licdn.com/dms/image/v2/D4D12AQEOM6rzHopGmA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1697112235781?e=2147483647&v=beta&t=-fVMrsO-OOCPIPuOfIH9A3LIPQJff_L_MUnm0UjsB5s" alt="Image 8">
-    </div>
-      <div class="image-box">
-      <img src="https://miro.medium.com/v2/resize:fit:1200/1*V-Jp13LvtVc2IiY2fp4qYw.jpeg" alt="Image 1">
-    </div>
-    <div class="image-box">
-      <img src="https://embracemultigraphicsinc.com/wp-content/uploads/2023/03/best-mobile-app-development-companies.png" alt="Image 2">
-    </div>
-    <div class="image-box">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVqsJqWZZ4GfN3JdIi3qAndrqoYn_FSv3dpQ&s" alt="Image 3">
-    </div>
-    <div class="image-box">
-      <img src="https://itrexgroup.com/wp-content/uploads/2024/08/game-development-services-3.jpg" alt="Image 4">
-    </div>
-    <div class="image-box">
-      <img src="https://outranking.s3.amazonaws.com/934231_Monique%20Dahito/57388180/2023-10-17T01%3A21%3A54.043368_91ec2bdd-aa31-4ba8-94a1-0e04bd495016" alt="Image 5">
-    </div>
-    <div class="image-box">
-      <img src="https://media.excellentwebworld.com/wp-content/uploads/2022/03/17091451/best-api-development-services.webp" alt="Image 6">
-    </div>
-    <div class="image-box">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxFvjPQUsf8pRbG4hn6KU85EcZ0fBu4uH3QQ&s" alt="Image 7">
-    </div>
-    <div class="image-box">
-      <img src="https://media.licdn.com/dms/image/v2/D4D12AQEOM6rzHopGmA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1697112235781?e=2147483647&v=beta&t=-fVMrsO-OOCPIPuOfIH9A3LIPQJff_L_MUnm0UjsB5s" alt="Image 8">
-    </div>
-    
   </div>
 
   <script>
