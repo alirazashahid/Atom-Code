@@ -8,13 +8,15 @@ html, body {
 	cursor: none;
 }
 
-.custom-cursor {
-	position: absolute;
-	top: 0;
-	left: 0;
-	display: none;
-}
 
+.custom-cursor {
+    position: fixed;  /* Changed to fixed to cover the whole viewport */
+    top: 0;
+    left: 0;
+    pointer-events: none;  /* Ensure the cursor doesn’t interfere with clickable elements */
+    z-index: 9999;  /* Ensure it appears above all other elements */
+
+}
 .site-wide {
 	width: 30px;
 	height: 30px;
@@ -38,7 +40,10 @@ html, body {
 	width: 20px;
 	height: 20px;
 }
-
+.custom-cursor.site-wide {
+	pointer-events: none; /* Allow mouse events to pass through */
+  }
+  
 .boxes {
 	width: 100%;
 	display: flex;
