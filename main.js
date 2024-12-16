@@ -1,280 +1,188 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+const site_wide_cursor = document.querySelector('.custom-cursor.site-wide');
+
+// Check if the device supports touch events (mobile devices)
+const isTouchDevice = 'ontouchstart' in document.documentElement;
+
+if (!isTouchDevice) {
+    // Only run cursor code for non-touch devices (PC or large screens)
+    document.addEventListener('mouseenter', () => {
+        site_wide_cursor.style.display = 'block';
+    });
+
+    document.addEventListener('mouseleave', () => {
+        site_wide_cursor.style.display = 'none';
+    });
+
+    // Track cursor movement for the whole document
+    document.addEventListener('mousemove', TrackCursor);
+
+    document.addEventListener('mousedown', () => site_wide_cursor.classList.add('active'));
+    document.addEventListener('mouseup', () => site_wide_cursor.classList.remove('active'));
+
+    function TrackCursor(evt) {
+        const w = site_wide_cursor.clientWidth;
+        const h = site_wide_cursor.clientHeight;
+
+        site_wide_cursor.style.transform = 
+            `translate(${evt.clientX - w / 2}px, ${evt.clientY - h / 2}px)`;
+    }
+} else {
+    // Disable custom cursor for touch devices
+    site_wide_cursor.style.display = 'none';
 }
 
-html, body {
-	cursor: none;
-}
+// Box Bound Cursors
+const boxes = document.querySelectorAll('.boxes .box');
 
+for (let i = 0; i < boxes.length; i++) {
+	const box = boxes[i];
+	const cursor = box.querySelector('.custom-cursor');
 
-.custom-cursor {
-    position: fixed;  /* Changed to fixed to cover the whole viewport */
-    top: 0;
-    left: 0;
-    pointer-events: none;  /* Ensure the cursor doesn’t interfere with clickable elements */
-    z-index: 9999;  /* Ensure it appears above all other elements */
+	box.addEventListener('mouseenter', () => {
+		site_wide_cursor.style.display = 'none';
+	});
 
-}
-.site-wide {
-	width: 30px;
-	height: 30px;
-	border-radius: 50%;
-	border: 2px solid black;
-}
+	box.addEventListener('mouseleave', () => {
+		site_wide_cursor.style.display = 'block';
+	});
 
-.site-wide .pointer {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 5px;
-	height: 5px;
-	border-radius: 50%;
-	background-color: black;
-	transition: width 0.1s ease-in-out, height 0.1s ease-in-out;
-}
+	document.addEventListener('mousemove', TrackBoxCursor.bind(box));
 
-.site-wide.active .pointer {
-	width: 20px;
-	height: 20px;
+	document.addEventListener('mousedown', () => cursor.classList.add('active'));
+	document.addEventListener('mouseup', () => cursor.classList.remove('active'));
 }
-.custom-cursor.site-wide {
-	pointer-events: none; /* Allow mouse events to pass through */
+function TrackBoxCursor(evt) {
+	const box = this;
+	const cursor = box.querySelector('.custom-cursor');
+  
+	const boxRect = box.getBoundingClientRect();
+  
+	const x = evt.pageX - boxRect.left - window.scrollX;
+	const y = evt.pageY - boxRect.top - window.scrollY;
+  
+	cursor.style.transform = `translate(${x}px, ${y}px)`;
   }
   
-.boxes {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
+    const colors = [
+	{
+    bg: `radial-gradient(at 30% 85%, rgb(153, 102, 204) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 85% 5%, rgb(255, 182, 193) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 60% 75%, rgb(204, 78, 61) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 75% 10%, rgb(255, 223, 0) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 25% 50%, rgb(0, 128, 0) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 80% 35%, rgb(64, 64, 64) 0px, transparent 50%) repeat scroll 0% 0%, 
+         rgba(0, 0, 0, 0) radial-gradient(at 40% 50%, rgb(64, 224, 208) 0px, rgb(255, 99, 71) 50%) repeat scroll 0% 0%`,
+    text: '#ffffff'
+},
+
+{
+    bg: `radial-gradient(at 30% 85%, rgb(204, 68, 102) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 85% 5%, rgb(255, 215, 0) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 60% 75%, rgb(0, 128, 0) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 75% 10%, rgb(0, 255, 255) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 25% 50%, rgb(255, 183, 197) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 80% 35%, rgb(34, 139, 34) 0px, transparent 50%) repeat scroll 0% 0%, 
+         rgba(0, 0, 0, 0) radial-gradient(at 40% 50%, rgb(214, 85, 86) 0px, rgb(252, 249, 186) 50%) repeat scroll 0% 0%`,
+    text: '#ffffff'
+},
+
+{
+    bg: `radial-gradient(at 30% 85%, rgb(0, 128, 0) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 85% 5%, rgb(128, 128, 128) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 60% 75%, rgb(72, 209, 204) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 75% 10%, rgb(255, 127, 80) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 25% 50%, rgb(176, 224, 230) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 80% 35%, rgb(153, 50, 204) 0px, transparent 50%) repeat scroll 0% 0%, 
+         rgba(0, 0, 0, 0) radial-gradient(at 40% 50%, rgb(138, 43, 226) 0px, rgb(255, 215, 0) 50%) repeat scroll 0% 0%`,
+    text: '#ffffff'
+},
+
+{
+    bg: `radial-gradient(at 30% 85%, rgb(64, 224, 208) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 85% 5%, rgb(255, 105, 180) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 60% 75%, rgb(72, 209, 204) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 75% 10%, rgb(255, 140, 0) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 25% 50%, rgb(173, 216, 230) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 80% 35%, rgb(255, 223, 186) 0px, transparent 50%) repeat scroll 0% 0%, 
+         rgba(0, 0, 0, 0) radial-gradient(at 40% 50%, rgb(219, 112, 147) 0px, rgb(60, 179, 113) 50%) repeat scroll 0% 0%`,
+    text: '#ffffff'
+},
+
+{
+    bg: `radial-gradient(at 30% 85%, rgb(0, 0, 255) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 85% 5%, rgb(255, 255, 0) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 60% 75%, rgb(255, 165, 0) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 75% 10%, rgb(255, 99, 71) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 25% 50%, rgb(176, 224, 230) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 80% 35%, rgb(0, 255, 255) 0px, transparent 50%) repeat scroll 0% 0%, 
+         rgba(0, 0, 0, 0) radial-gradient(at 40% 50%, rgb(255, 99, 71) 0px, rgb(255, 215, 0) 50%) repeat scroll 0% 0%`,
+    text: '#ffffff'
+},
+
+{
+    bg: `radial-gradient(at 30% 85%, rgb(250, 128, 114) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 85% 5%, rgb(255, 228, 225) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 60% 75%, rgb(144, 238, 144) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 75% 10%, rgb(138, 43, 226) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 25% 50%, rgb(255, 250, 250) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 80% 35%, rgb(255, 228, 196) 0px, transparent 50%) repeat scroll 0% 0%, 
+         rgba(0, 0, 0, 0) radial-gradient(at 40% 50%, rgb(244, 164, 96) 0px, rgb(255, 160, 122) 50%) repeat scroll 0% 0%`,
+    text: '#ffffff'
+},
+
+{
+    bg: `radial-gradient(at 30% 85%, rgb(255, 99, 71) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 85% 5%, rgb(240, 128, 128) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 60% 75%, rgb(128, 128, 0) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 75% 10%, rgb(255, 255, 0) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 25% 50%, rgb(255, 215, 0) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 80% 35%, rgb(255, 140, 0) 0px, transparent 50%) repeat scroll 0% 0%, 
+         rgba(0, 0, 0, 0) radial-gradient(at 40% 50%, rgb(255, 69, 0) 0px, rgb(255, 165, 0) 50%) repeat scroll 0% 0%`,
+    text: '#ffffff'
+},
+
+{
+    bg: `radial-gradient(at 30% 85%, rgb(139, 69, 19) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 85% 5%, rgb(255, 245, 238) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 60% 75%, rgb(70, 130, 180) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 75% 10%, rgb(255, 99, 71) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 25% 50%, rgb(255, 228, 225) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 80% 35%, rgb(255, 222, 173) 0px, transparent 50%) repeat scroll 0% 0%, 
+         rgba(0, 0, 0, 0) radial-gradient(at 40% 50%, rgb(255, 160, 122) 0px, rgb(255, 215, 0) 50%) repeat scroll 0% 0%`,
+    text: '#ffffff'
+},
+
+{
+    bg: `radial-gradient(at 30% 85%, rgb(178, 34, 34) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 85% 5%, rgb(107, 142, 35) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 60% 75%, rgb(255, 140, 0) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 75% 10%, rgb(255, 20, 147) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 25% 50%, rgb(0, 128, 0) 0px, transparent 50%) repeat scroll 0% 0%, 
+         radial-gradient(at 80% 35%, rgb(255, 105, 180) 0px, transparent 50%) repeat scroll 0% 0%, 
+         rgba(0, 0, 0, 0) radial-gradient(at 40% 50%, rgb(70, 130, 180) 0px, rgb(255, 228, 196) 50%) repeat scroll 0% 0%`,
+    text: '#ffffff'
 }
 
-.boxes .box {
-	position: relative;
-	width: 300px;
-	height: 300px;
-	overflow: hidden;
-}
+	];
 
-.boxes .box:nth-child(1) {
-	background-color: palevioletred;
-}
-
-.boxes .box:nth-child(2) {
-	background-color: palegreen;
-}
-
-.boxes .box:nth-child(3) {
-	background-color: paleturquoise;
-}
-
-.box-bound {
-	display: block;
-	width: 100px;
-	height: 50px;
-	background-position: top left;
-	background-size: contain;
-	background-repeat: no-repeat;
-	transition: width 0.1s ease-in-out, height 0.1s ease-in-out;
-}
-
-.box-bound.active {
-	width: 150px;
-	height: 75px;
-}
-body, html {
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	overflow-y: scroll; /* Enable vertical scrolling */
-	overflow-x: hidden; /* Prevent horizontal scrolling */
-  }
-
-  body {
-	font-family: Arial, sans-serif;
-	color: rgb(68, 58, 58);
-	text-align: center;
-	font-size: 2em;
-	position: relative;
-	transition: background 0.8s, color 0.5s;
-	background-color: rgb(161, 248, 241);
-  }
-
-  /* Motion Gradient Background with Blur */
-  body::before {
-	content: '';
-	position: fixed;
-	top: -10px;
-	left: -10px;
-	width: calc(100% + 20px);
-	height: calc(100% + 20px);
-	background-size: 300% 300%;
-	animation: gradientAnimation 30s ease infinite;
-	z-index: -1;
-	filter: blur(20px);
-  }
-
-  @keyframes gradientAnimation {
-	0% {
-	  background-position: 0% 50%;
-	}
-	50% {
-	  background-position: 100% 50%;
-	}
-	100% {
-	  background-position: 0% 50%;
-	}
-  }
-  .navbar {
-display: flex;
-position: sticky;
-top: 0;
-align-items: center;
-justify-content: flex-start;
-background-color: transparent;
-padding: 10px 20px;
-border-bottom: 1px solid rgba(204, 204, 204, 0);
-z-index: 10;
-box-shadow: 0px 0px 10px 2px black;
-}
-
-.navbar .logo img {
-height: 40px;
-border-radius: 20px;
-box-shadow: 0px 0px 10px 2px black;
-}
-
-.navbar .menu-toggle {
-display: none;
-font-size: 1.4em;
-color: white;
-cursor: pointer;
-margin-left: auto;
-margin-top: -16px;
-}
-
-.navbar .menu-toggle span {
-display: none;
-font-size: 0.8em;
-margin-left: 10px;
-}
-
-.navbar ul {
-list-style: none;
-display: flex;
-margin: 0;
-padding: 0;
-text-shadow: 1px 3px 2px black;
-}
-
-.navbar ul li {
-margin-left: 93px;
-}
-
-.navbar ul li a {
-text-decoration: none;
-color: #fff;
-font-size: 1em;
-transition: color 0.3s, transform 0.2s ease-in-out; /* Adjusted transition timing */
-}
-
-.navbar ul li a:hover {
-color: #00aeff;
-transform: translateY(-2px); /* Slight lift on hover */
-}
-
-/* Responsive Navbar */
-@media (max-width: 767px) {
-.navbar .menu-toggle {
-  display: block;
-}
-
-.navbar .menu-toggle span {
-  display: inline; /* Show the "Atom" text on mobile */
-}
-
-.navbar ul {
-  display: none;
-  flex-direction: column;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  position: absolute;
-  top: 60px;
-  left: 0;
-  padding: 0;
-}
-
-.navbar ul.active {
-  display: flex;
-}
-
-.navbar ul li {
-  margin: 0;
-  text-align: center;
-  padding: 10px 0;
-}
-}
-
-
-  .container {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	gap: 20px;
-	padding: 20px;
-	justify-items: center;
-	max-width: 100%; /* Prevents the container from overflowing */
-	margin: 0 auto;  /* Center the container */
-  }
-
-  .image-box {
-	position: relative;
-	width: 100%;
-	max-width: 300px;
-	height: auto;       /* Let the height adapt to the image */
-	opacity: 0;
-	transform: translateY(100px);
-	animation: slideUp 1s forwards ease-out;
-  }
-
-  .image-box img {
-	width: 100%;
-	height: auto;       /* Maintain image aspect ratio */
-	object-fit: cover;
-	border-radius: 10px;
-	transition: transform 0.3s, box-shadow 0.3s !important;
-  }
-
-  .image-box:hover img {
-	transform: translateY(-10px);
-	box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.6);
-  }
-
-  @keyframes slideUp {
-	to {
-	  transform: translateY(0);
-	  opacity: 1;
-	}
-  }
-
-  /* Custom Scrollbar */
-  ::-webkit-scrollbar {
-	width: 12px;  /* Adjust the width for a thicker scrollbar */
-  }
-
-  ::-webkit-scrollbar-track {
-	background: rgba(255, 192, 203, 0);  /* Transparent track */
-	border-radius: 10px;  /* Rounded corners for the track */
-  }
-
-  ::-webkit-scrollbar-thumb {
-	background: linear-gradient(45deg, #00aeff, #a68eff);  /* Gradient color for the thumb */
-	border-radius: 10px;  /* Rounded corners for the thumb */
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-	background: linear-gradient(45deg, #00aeff, #8c74d6);  /* Slightly darker gradient on hover */
+  
+	  let currentIndex = 0;
+  
+	  function changeColor() {
+		// Get the current gradient color object
+		const color = colors[currentIndex];
+		
+		// Apply the background gradient and text color
+		document.body.style.background = color.bg;
+		document.body.style.color = color.text;
+  
+		// Move to the next color in the array, loop back to 0 if at the end
+		currentIndex = (currentIndex + 1) % colors.length;
+	  }
+	  const cursor = document.getElementById("cursor");
+  // Disable custom cursor for mobile devices
+if (window.innerWidth <= 767) {
+	document.querySelector('.custom-cursor').style.display = 'none';
+	document.removeEventListener('mousemove', TrackCursor);
   }
   
