@@ -1,3 +1,83 @@
+ /* Compiled CSS */
+ body {
+    background: #eaeef6;
+    font-family: 'Open Sans', sans-serif;
+  }
+  .navbar {
+    position: fixed;
+    top: 7rem;
+    left: 1rem;
+    background: #fff;
+    border-radius: 10px;
+    padding: 1rem 0;
+    box-shadow: 0 0 40px rgb(0 0 0 / 28%);
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  .navbar__item:last-child::before {
+    content: '';
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+    top: 0;
+    left: 1rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    background: #406ff3;
+    border-radius: 17.5px;
+    transition: 250ms cubic-bezier(1, 0.2, 0.1, 1.2) all;
+  }
+  
+  .navbar__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.5rem;
+    width: 5.5rem;
+    color: #6a778e;
+    transition: 250ms ease all;
+  }
+  
+  .navbar__link span {
+    position: absolute;
+    left: 100% !important;
+    transform: translate(-3rem);
+    margin-left: 1rem;
+    opacity: 0;
+    pointer-events: none;
+    color: #406ff3;
+    background: #fff;
+    padding: 0.75rem;
+    transition: 250ms ease all;
+    border-radius: 17.5px;
+  }
+  
+  .navbar__link:hover {
+    color: #fff;
+  }
+  
+  .navbar__link:hover span {
+    opacity: 1;
+    transform: translate(0);
+  }
+  
+  .navbar__menu {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Hide navbar on mobile or tablet */
+  @media (max-width: 768px) {
+    .navbar {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+  }
+  
 * {
 	margin: 0;
 	padding: 0;
@@ -6,44 +86,41 @@
 
 html, body {
 	cursor: none;
+	overflow-x: hidden; /* Ensure no horizontal scrolling */
+
 }
-
-
 .custom-cursor {
-    position: fixed;  /* Changed to fixed to cover the whole viewport */
-    top: 0;
-    left: 0;
-    pointer-events: none;  /* Ensure the cursor doesn’t interfere with clickable elements */
-    z-index: 9999;  /* Ensure it appears above all other elements */
-
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
 }
+
 .site-wide {
-	width: 30px;
-	height: 30px;
-	border-radius: 50%;
-	border: 2px solid black;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid rgb(26, 44, 43);
 }
 
 .site-wide .pointer {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 5px;
-	height: 5px;
-	border-radius: 50%;
-	background-color: black;
-	transition: width 0.1s ease-in-out, height 0.1s ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: black;
+  transition: width 0.1s ease-in-out, height 0.1s ease-in-out;
 }
 
 .site-wide.active .pointer {
-	width: 20px;
-	height: 20px;
+  width: 20px;
+  height: 20px;
 }
-.custom-cursor.site-wide {
-	pointer-events: none; /* Allow mouse events to pass through */
-  }
-  
+
 .boxes {
 	width: 100%;
 	display: flex;
@@ -89,7 +166,6 @@ body, html {
 	margin: 0;
 	padding: 0;
 	height: 100%;
-	overflow-y: scroll; /* Enable vertical scrolling */
 	overflow-x: hidden; /* Prevent horizontal scrolling */
 	 
   }
@@ -97,19 +173,18 @@ body, html {
   body {
 	font-family: Arial, sans-serif;
 	color: rgb(68, 58, 58);
-	text-align: center;
-	font-size: 2em;
+	/* font-size: 2em; */
 	position: relative;
 	transition: background 0.8s, color 0.5s;
 	background-color:rgba(148, 248, 218, 0);
 	background-image:
-	radial-gradient(at 40% 20%, hsla(28,100%,74%,1) 0px, transparent 50%),
-	radial-gradient(at 80% 0%, hsla(189,100%,56%,1) 0px, transparent 50%),
-	radial-gradient(at 0% 50%, hsla(355,100%,93%,1) 0px, transparent 50%),
-	radial-gradient(at 80% 50%, hsla(340,100%,76%,1) 0px, transparent 50%),
-	radial-gradient(at 0% 100%, hsla(22,100%,77%,1) 0px, transparent 50%),
-	radial-gradient(at 80% 100%, hsla(242,100%,70%,1) 0px, transparent 50%),
-	radial-gradient(at 0% 0%, hsla(343,100%,76%,1) 0px, transparent 50%);
+	radial-gradient(at 40% 20%, rgba(164, 17, 184, 0.384) 0px, transparent 50%),
+	radial-gradient(at 80% 0%, rgba(31, 221, 255, 0.356) 0px, transparent 50%),
+	radial-gradient(at 0% 50%, rgba(255, 219, 222, 0.411) 0px, transparent 50%),
+	radial-gradient(at 80% 50%, rgba(253, 113, 160, 0.555) 0px, transparent 50%),
+	radial-gradient(at 0% 100%, rgba(161, 255, 138, 0.486) 0px, transparent 50%),
+	radial-gradient(at 80% 100%, rgba(107, 102, 255, 0.637) 0px, transparent 50%),
+	radial-gradient(at 0% 0%, rgba(101, 253, 207, 0.507) 0px, transparent 50%);
   }
 
   /* Motion Gradient Background with Blur */
@@ -137,96 +212,6 @@ body, html {
 	  background-position: 0% 50%;
 	}
   }
-  .navbar {
-display: flex;
-position: sticky;
-top: 0;
-align-items: center;
-justify-content: flex-start;
-background-color: transparent;
-padding: 10px 20px;
-border-bottom: 1px solid rgba(204, 204, 204, 0);
-z-index: 10;
-box-shadow: 0px 0px 10px 2px black;
-}
-
-.navbar .logo img {
-height: 40px;
-border-radius: 20px;
-box-shadow: 0px 0px 10px 2px black;
-}
-
-.navbar .menu-toggle {
-display: none;
-font-size: 1.4em;
-color: white;
-cursor: pointer;
-margin-left: auto;
-margin-top: -16px;
-}
-
-.navbar .menu-toggle span {
-display: none;
-font-size: 0.8em;
-margin-left: 10px;
-}
-
-.navbar ul {
-list-style: none;
-display: flex;
-margin: 0;
-padding: 0;
-text-shadow: 1px 3px 2px black;
-}
-
-.navbar ul li {
-margin-left: 93px;
-}
-
-.navbar ul li a {
-text-decoration: none;
-color: #fff;
-font-size: 1em;
-transition: color 0.3s, transform 0.2s ease-in-out; /* Adjusted transition timing */
-}
-
-.navbar ul li a:hover {
-color: #00aeff;
-transform: translateY(-2px); /* Slight lift on hover */
-}
-
-/* Responsive Navbar */
-@media (max-width: 767px) {
-.navbar .menu-toggle {
-  display: block;
-}
-
-.navbar .menu-toggle span {
-  display: inline; /* Show the "Atom" text on mobile */
-}
-
-.navbar ul {
-  display: none;
-  flex-direction: column;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  position: absolute;
-  top: 60px;
-  left: 0;
-  padding: 0;
-}
-
-.navbar ul.active {
-  display: flex;
-}
-
-.navbar ul li {
-  margin: 0;
-  text-align: center;
-  padding: 10px 0;
-}
-}
-
 
   .container {
 	display: grid;
@@ -285,5 +270,20 @@ transform: translateY(-2px); /* Slight lift on hover */
 
   ::-webkit-scrollbar-thumb:hover {
 	background: linear-gradient(45deg, #00aeff, #8c74d6);  /* Slightly darker gradient on hover */
+  }
+  
+  .logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    text-align: left !important;
+    margin-left: 19px !important;
+    margin-top: 13px;
+    box-shadow: 0px 0px 12px 1px black;
+    
+    /* Make the logo sticky */
+    position: sticky;
+    top: 0; /* Stick to the top of the page */
+    z-index: 100; /* Ensure the logo stays above other elements */
   }
   
