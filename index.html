@@ -1,149 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Custom Cursors</title>
-	<link rel="stylesheet" href="main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar with Feather Icons</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
 </head>
 <body onclick="changeColor()">
+  <nav class="navbar">
+    <img src="logo.gif" class="logo" alt="Website Logo">
 
+    <ul class="navbar__menu">
+      <li class="navbar__item">
+        <a href="#" class="navbar__link"><i data-feather="home"></i><span>Home</span></a>
+      </li>
+      <li class="navbar__item">
+        <a href="#" class="navbar__link acp"><i data-feather="monitor"></i><span>Services</span></a>        
+      </li>
+      <li class="navbar__item">
+        <a href="#" class="navbar__link"><i data-feather="users"></i><span>Customers</span></a>        
+      </li>
+      <li class="navbar__item">
+        <a href="#" class="navbar__link"><i data-feather="folder"></i><span>Projects</span></a>        
+      </li>
+     
+      <li class="navbar__item">
+        <a href="#" class="navbar__link"><i data-feather="phone"></i><span>Contact</span></a>        
+      </li>
+      
+    </ul>
+  </nav>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
-	<nav class="navbar">
-	  <div class="logo">
-		<img src="logo.gif" alt="Website Logo">
-	  </div>
-	  <span class="menu-toggle" onclick="toggleMenu()"><span style="text-shadow: 1px 3px 2px black;">𝓐𝓽𝓸𝓶 𝓒𝓸𝓭𝓮</span><span style=" margin-left: 15px;">&#9776;</span></span>
-	  <ul id="navbar-menu">
-		<li><a href="#home">𝓗𝓸𝓶𝓮</a></li>
-		<li><a href="#projects">𝓟𝓻𝓸𝓳𝓮𝓬𝓽𝓼</a></li>
-		<li><a href="#services">𝓢𝓮𝓻𝓿𝓲𝓬𝓮𝓼</a></li>
-		<li><a href="#about">𝓐𝓫𝓸𝓾𝓽</a></li>
-	  </ul>
-	</nav>
   
-	<div class="container">
-	  <div class="image-box">
-		<img src="p.png" alt="Image 2">
-	  </div>
-	  <div class="image-box">
-		<img src="p.png" alt="Image 2">
-	  </div>
-	  <div class="image-box">
-		<img src="p.png" alt="Image 2">
-	  </div>
-	  <div class="image-box">
-		<img src="p.png" alt="Image 2">
-	  </div>
-	  <div class="image-box">
-		<img src="p.png" alt="Image 2">
-	  </div>
-	  <div class="image-box">
-		<img src="p.png" alt="Image 2">
-	  </div>
-	  <div class="image-box">
-		<img src="p.png" alt="Image 2">
-	  </div>
-	  <div class="image-box">
-		<img src="p.png" alt="Image 2">
-	  </div>
-	  <div class="image-box">
-		<img src="p.png" alt="Image 2">
-	  </div>
-	  <div class="image-box">
-		<img src="p.png" alt="Image 2">
-	  </div>
-	  <div class="image-box">
-		<img src="p.png" alt="Image 2">
-	  </div>
-	  <div class="image-box">
-		<img src="p.png" alt="Image 2">
-	  </div>
-	  <div class="image-box">
-		<img src="p.png" alt="Image 2">
-	  </div>
-	  <div class="image-box">
-		<img src="p.png" alt="Image 2">
-	  </div>
-	  <div class="image-box">
-		<img src="p.png" alt="Image 2">
-	  </div>
-	  <div class="image-box">
-		<img src="p.png" alt="Image 2">
-	  </div>
-	  <div class="image-box">
-		<img src="p.png" alt="Image 2">
-	  </div>
-	  <div class="image-box">
-		<img src="p.png" alt="Image 2">
-	  </div>
-	  <div class="image-box">
-		<img src="p.png" alt="Image 2">
-	  </div>
-	  <div class="image-box">
-		<img src="p.png" alt="Image 2">
-	  </div>
-	  <div class="image-box">
-		<img src="p.png" alt="Image 2">
-	  </div>
-	  <div class="image-box">
-		<img src="p.png" alt="Image 2">
-	  </div>
-	  <div class="image-box">
-		<img src="p.png" alt="Image 2">
-	  </div>
-	  <div class="image-box">
-		<img src="p.png" alt="Image 2">
-	  </div>
-	  <div class="image-box">
-		<img src="p.png" alt="Image 2">
-	  </div>
-	  <div class="image-box">
-		<img src="p.png" alt="Image 2">
-	  </div>
-	  <div class="image-box">
-		<img src="p.png" alt="Image 2">
-	  </div>
-	  <div class="image-box">
-		<img src="p.png" alt="Image 2">
-	  </div>
-	  <div class="image-box">
-		<img src="p.png" alt="Image 2">
-	  </div>
-	  <div class="image-box">
-		<img src="p.png" alt="Image 2">
-	  </div>
-	  <div class="image-box">
-		<img src="p.png" alt="Image 2">
-	  </div>
-	  <div class="image-box">
-		<img src="p.png" alt="Image 2">
-	  </div>
-	  <div class="image-box">
-		<img src="p.png" alt="Image 2">
-	  </div>
-	  <div class="image-box">
-		<img src="p.png" alt="Image 2">
-	  </div>
-	  <div class="image-box">
-		<img src="p.png" alt="Image 2">
-	  </div>
-	  <div class="image-box">
-		<img src="p.png" alt="Image 2">
-	  </div>
-	  <div class="image-box">
-		<img src="p.png" alt="Image 2">
-	  </div>
-	  
-   
-  
-	</div>
-	<div class="custom-cursor site-wide">
-		<div class="pointer"></div>
-	</div>
-	<div class="cursor" id="cursor"></div>
+  <!-- Feather Icons Script -->
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>
+    feather.replace();
+  </script>
 
-	<script src="main.js"></script>
+<div class="custom-cursor site-wide">
+  <div class="pointer"></div>
+</div>
+<div class="cursor" id="cursor"></div>
+
+<script src="main.js"></script>
 </body>
 </html>
