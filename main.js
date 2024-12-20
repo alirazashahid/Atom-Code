@@ -1,4 +1,18 @@
-
+document.addEventListener("DOMContentLoaded", () => {
+    const navbar = document.querySelector(".navbar");
+  
+    // Detect if the user is on a mobile device
+    const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|Windows Phone|webOS/i.test(navigator.userAgent);
+  
+    if (isMobile) {
+      // Add a class to hide the navbar for mobile users
+      navbar.classList.add("hide-on-mobile");
+    } else {
+      // Ensure the navbar is visible for desktop users
+      navbar.classList.remove("hide-on-mobile");
+    }
+  });
+  
 const site_wide_cursor = document.querySelector('.custom-cursor.site-wide');
 
 // Check if the device supports touch events (mobile devices)
