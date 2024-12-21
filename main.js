@@ -1,3 +1,46 @@
+
+// Mobile nav Bar 
+// Check if the device is mobile
+const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+const navBar = document.querySelector('.nav');
+
+// Hide the nav bar if not on a mobile device
+if (!isMobile) {
+    navBar.style.display = 'none';
+}
+
+// Existing JavaScript functionality
+const navExpand = document.getElementById('nav-expand'),
+      navExpandList = document.getElementById('nav-expand-list'),
+      navExpandIcon = document.getElementById('nav-expand-icon');
+
+navExpand.addEventListener('click', () => {
+   // Expand list
+   navExpandList.classList.toggle('show-list');
+
+   // Rotate icon
+   navExpandIcon.classList.toggle('rotate-icon');
+});
+
+const sections = document.querySelectorAll('section[id]');
+const scrollActive = () => {
+    const scrollDown = window.scrollY;
+
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight,
+              sectionTop = current.offsetTop - 58,
+              sectionId = current.getAttribute('id'),
+              sectionsClass = document.querySelector('.nav__list a[href*=' + sectionId + ']');
+
+        if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
+            sectionsClass.classList.add('active-link');
+        } else {
+            sectionsClass.classList.remove('active-link');
+        }
+    });
+};
+window.addEventListener('scroll', scrollActive);
+
 document.addEventListener("DOMContentLoaded", () => {
     const navbar = document.querySelector(".navbar");
   
