@@ -6,9 +6,76 @@
   <title>Responsive Navbar with Feather Icons</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <!--=============== REMIXICONS ===============-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="style.css">
 
 </head>
 <body onclick="changeColor()">
+  
+  <!--=============== NAVBAR ===============-->
+  <nav class="nav">
+    <ul class="nav__list">
+       <li>
+          <a href="#home" class="nav__link active-link">
+             <i data-feather="home"></i>
+          </a>
+       </li>
+
+       <li>
+          <a href="#about" class="nav__link">
+             <i data-feather="monitor" ></i>
+          </a>
+       </li>
+
+       <!-- Expand list -->
+       <li>
+          <button data-feather="phone" id="nav-expand">
+             <i class="ri-add-line nav__expand-icon" id="nav-expand-icon"></i>
+          </button>
+
+          <ul class="nav__expand-list" id="nav-expand-list">
+             <li>
+                <a href="#" class="nav__expand-link">
+                   <i data-feather= "message-circle"></i>
+                   <span>Whatsapp</span>
+                </a>
+             </li>
+ 
+             <li>
+                <a href="#" class="nav__expand-link">
+                   <i data-feather="mail"></i>
+                   <span>Email</span>
+                </a>
+             </li>
+ 
+             <li>
+                <a href="#" class="nav__expand-link">
+                   <i data-feather="instagram"></i>
+                   <span>Instagram</span>
+                </a>
+             </li>
+          </ul>
+       </li>
+    
+       <li>
+          <a href="#projects" class="nav__link">
+             <i data-feather="folder"></i>
+          </a>
+       </li>
+
+       <li>
+          <a href="#Coustmer" class="nav__link">
+             <i data-feather="users"></i>
+          </a>
+       </li>
+    </ul>
+ </nav>
+
+ 
+ 
   <nav class="navbar">
     <img src="logo.gif" class="logo" alt="Website Logo">
 
