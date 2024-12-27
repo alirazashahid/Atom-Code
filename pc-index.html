@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar with Feather Icons</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!--=============== REMIXICONS ===============-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body onclick="changeColor()">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+     <!-- Text Overlay -->
+<div class="text-overlay">
+   <h1>ATOM CODE</h1>
+   <h2 class="typing-effect">A Technology Company</h2>
+   <div class="wave-shape wave-1"></div>
+   <p class="discription">
+    "Welcome to Atomcode – your trusted partner in technology solutions! 
+    We specialize in crafting stunning websites, solving complex web issues, 
+    and programming custom software tailored to your needs. 
+    From PLC systems to DCS systems and Android apps, we deliver cutting-edge 
+    solutions for your business. At Atomcode, innovation meets precision to 
+    bring your ideas to life."
+ </p>
+ </div>
+ 
+ 
+ 
+  <nav class="navbar">
+    <img src="logo.gif" class="logo" alt="Website Logo">
+
+    <ul class="navbar__menu">
+      <li class="navbar__item">
+        <a href="#" class="navbar__link"><i data-feather="home"></i><span>Home</span></a>
+      </li>
+      <li class="navbar__item">
+        <a href="#" class="navbar__link acp"><i data-feather="monitor"></i><span>Services</span></a>        
+      </li>
+      <li class="navbar__item">
+        <a href="#" class="navbar__link"><i data-feather="users"></i><span>Customers</span></a>        
+      </li>
+      <li class="navbar__item">
+        <a href="#" class="navbar__link"><i data-feather="folder"></i><span>Projects</span></a>        
+      </li>
+     
+      <li class="navbar__item">
+        <a href="#" class="navbar__link"><i data-feather="phone"></i><span>Contact</span></a>        
+      </li>
+      
+    </ul>
+  </nav>
+ 
+
+  <!-- Feather Icons Script -->
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>
+    feather.replace();
+  // JavaScript to add typing effect class after the slideUp animation ends
+  document.addEventListener('DOMContentLoaded', () => {
+      const heading = document.getElementById('animatedHeading'); // Target by ID
+      heading.addEventListener('animationend', (event) => {
+          if (event.animationName === 'slideUp') {
+              // Add a delay before starting the typing effect
+              setTimeout(() => {
+                  heading.classList.add('typing-effect'); // Add typing effect class
+
+                  // Remove the cursor after typing effect ends
+                  setTimeout(() => {
+                      heading.classList.remove('typing-effect'); // Remove typing effect class
+                  }, 3000); // Match typing animation duration (2s) + additional delay for cursor
+              }, 1000); // 1-second delay
+          }
+      });
+  });
+  </script>
+
+<div class="custom-cursor site-wide">
+  <div class="pointer"></div>
+</div>
+<div class="cursor" id="cursor"></div>
+
+<script src="main.js">
+</script>
+<script>
+  // Function to detect the device and take appropriate action
+  function detectDeviceAndHandle() {
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      // Check if the device is a mobile or tablet
+      if (/android/i.test(userAgent) || 
+          /iPad|iPhone|iPod/.test(userAgent) || 
+          /Windows Phone/i.test(userAgent) ||
+          /Mobile|Tablet/i.test(userAgent)) {
+          // Redirect to m-index.html for mobile or tablet
+          window.location.href = "m-index.html";
+      } 
+  }
+
+  // Call the function when the page loads
+  window.onload = detectDeviceAndHandle;
+</script>
+
+</body>
+</html>
