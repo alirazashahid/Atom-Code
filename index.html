@@ -99,7 +99,7 @@
                            ('ontouchstart' in window || navigator.maxTouchPoints > 0);
 
           // Simulating redirection failure for demonstration
-          const targetPage = isMobile ? "m-index.html" : "pc-index.html";
+          const targetPage = isMobile ? "m-index" : "pc-index";
           fetch(targetPage)
               .then(response => {
                   if (!response.ok) {
