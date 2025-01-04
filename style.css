@@ -1,0 +1,350 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  overflow-x: hidden; /* Prevent horizontal scroll bar */
+  cursor: none;
+
+}
+body {
+  font-family: Arial, sans-serif;
+  color: rgb(255, 255, 255) !important;
+  position: relative;
+  transition: background 0.8s, color 0.5s;
+  background-image:
+  radial-gradient(at 40% 20%, rgba(164, 17, 184, 0.384) 0px, transparent 50%),
+  radial-gradient(at 80% 0%, rgba(31, 221, 255, 0.356) 0px, transparent 50%),
+  radial-gradient(at 0% 50%, rgba(255, 219, 222, 0.411) 0px, transparent 50%),
+  radial-gradient(at 80% 50%, rgba(253, 113, 160, 0.555) 0px, transparent 50%),
+  radial-gradient(at 0% 100%, rgba(161, 255, 138, 0.486) 0px, transparent 50%),
+  radial-gradient(at 80% 100%, rgba(107, 102, 255, 0.637) 0px, transparent 50%),
+  radial-gradient(at 0% 0%, rgba(101, 253, 207, 0.507) 0px, transparent 50%);
+  width: 100%;
+  height: 100%;
+
+
+}
+  
+.atom-bg {
+  width: 100%;
+  height: 625px;
+  display: block;
+  /* border: 3.1px solid black; */
+}
+.css-bg {
+  width: 100%;
+  height: 625px;
+  display: block;
+  /* border: 3.1px solid black; */
+}
+.js-bg {
+  width: 100%;
+  height: 625px;
+  display: block;
+  /* border: 3.1px solid black; */
+}
+.html-bg{
+    width: 100%;
+    height: 625px;
+    display: block;
+    /* border: 3.1px solid black; */
+
+}
+iframe {
+  overflow: hidden;
+}
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  display: none; /* Initially hidden */
+
+}
+
+.site-wide {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid rgb(6, 10, 10);
+}
+
+.site-wide .pointer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: black;
+  transition: width 0.1s ease-in-out, height 0.1s ease-in-out;
+}
+
+.site-wide.active .pointer {
+  width: 20px;
+  height: 20px;
+}  
+
+.navbar {
+  position: fixed;
+  top: 7rem;
+  left: 0.5 rem;
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem 0;
+  box-shadow: 0 0 40px rgb(0 0 0 / 28%);
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 50; /* Set high enough to stay above overlays */
+}
+.hide-on-mobile {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.navbar__item:last-child::before {
+  content: '';
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  top: 0;
+  left: 1rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  background: #406ff3;
+  border-radius: 17.5px;
+  transition: 250ms cubic-bezier(1, 0.2, 0.1, 1.2) all;
+}
+
+.navbar__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.5rem;
+  width: 5.5rem;
+  color: #6a778e;
+  transition: 250ms ease all;
+  z-index: 10; /* Ensure it's above the overlay */
+
+}
+
+.navbar__link span {
+  position: absolute;
+  left: 100%;
+  top: 50%; /* Vertically center the span */
+  transform: translate(0, -50%);
+  margin-left: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  color: #406ff3;
+  background: #fff;
+  padding: 0.75rem;
+  transition: 250ms ease all;
+  border-radius: 17.5px;
+  z-index: 10;
+  box-shadow: 0px 0px 9px 2px rgba(255, 255, 255, 1);
+}
+
+.navbar__link:hover {
+  color: #fff;
+  z-index: 10; /* Ensure it's above the overlay */
+
+}
+
+.navbar__link:hover span {
+  opacity: 1;
+  transform: translate(0);
+  z-index: 10; /* Ensure it's above the overlay */
+
+}
+
+.navbar__menu {
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* Add a class to hide the navbar */
+.hide-on-mobile {
+opacity: 0;
+visibility: hidden;
+pointer-events: none;
+}
+
+/* Hide navbar on small devices */
+@media (max-width: 768px), (orientation: portrait) {
+  .navbar {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  text-align: left !important;
+  margin-left: 19px !important;
+  margin-top: 13px;
+  box-shadow: 0px 0px 12px 1px black;
+  
+  /* Make the logo sticky */
+  position: sticky;
+  top: 0; /* Stick to the top of the page */
+  z-index: 100; /* Ensure the logo stays above other elements */
+}
+
+.firstflor{
+  width: 90%;
+  height: 375px;
+  z-index: 20;
+  position: absolute;
+  margin-top: 113px;
+  margin-left: 90px;
+  display: flex;
+}
+
+.f1-room1{
+  width: 49.9%;
+  height: 375px;
+  position: relative;
+  animation: slideFromTop 1.5s ease forwards;
+  text-shadow: 0px 0px 4px black;
+  font-family:  sans-serif;
+}
+.f1-room1-bed1 {
+  height: 25%;
+  padding-left: 4%;
+}
+
+h1 {
+  font-size: 2rem;  /* Adjusted size */
+  margin: 0;
+  margin-bottom: 2px;
+}
+h2 {
+  font-size: 1.5rem;  /* Adjusted size */
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typing 5s steps(30, end) forwards 1s, hideBorder 1s forwards 3.85s;
+  margin: 0px;
+  border-right: 2px solid black;
+  
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes hideBorder {
+  to { border-right: 0px; }
+}
+
+.f1-room2{
+  width: 49.9%;
+  height: 375px;
+  position: relative;
+  animation: slideFromBottom 1.5s ease forwards;
+}
+
+@keyframes slideFromTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromBottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.f1-room1-bed2{
+  width: 95%;
+  margin-top: 0px !important;
+  margin-left: 0px !important;
+  text-shadow: 0px 0px 2px !important;
+  z-index: 20;
+  color: black;
+  text-align: justify;
+  padding-left: 20px;
+
+}
+p{
+  margin: 0;
+}
+.name-s {
+  width: 75%;
+  margin-left: 30%;
+  height: 150px;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  background-size: cover;
+}
+
+
+.wave-shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 276px;
+  height: 270px;
+  animation: wave 6s infinite ease-in-out;
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  transition: opacity 0.5s cubic-bezier(0.5, 0, 0, 1) 0.4s, 
+                        transform 0.5s cubic-bezier(0.5, 0, 0, 1) 0.4s;
+
+}
+.wave-1 {
+  background: url('code.gif') no-repeat center/cover;
+  z-index: 2;
+  border-radius:20px;
+  box-shadow: 0px 0px 11px 4px black;
+  -webkit-animation: liquid 7s ease-in-out infinite;
+  animation: liquid 7s ease-in-out infinite;
+  margin: 40px 0px 0px 80px;
+}
+@keyframes liquid {
+  0% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+      transform: scale(1);
+  }
+  50% {
+      border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+      transform: scale(1.05);
+  }
+  100% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+      transform: scale(1);
+  }
+}
+.wave-2 {
+background: rgba(0, 174, 255, 0);
+z-index: 1;
+}
+@keyframes wave {
+0%, 
+100% {
+    transform: translateY(0) rotate(0deg);
+}
+50% {
+    transform: translateY(-30px) rotate(0deg);
+}
+}
