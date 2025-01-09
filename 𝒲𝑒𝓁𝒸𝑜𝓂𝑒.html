@@ -4,24 +4,26 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
   <title>Atom Code</title>
   <link rel="icon" href="images/logo.png" type="image/png">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
-  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900">
+
+  <link rel="stylesheet" href="style.css">   
 </head>
 <body onclick="changeColor()">
-  <!-- Text Overlay -->
+  <div class="threeD-bg">
+
   <div class="firstflor">
-   <div class="f1-room1">
-    
-     <div class="f1-room1-bed1">
-       <h1>ATOM CODE</h1>
-       <h2>A Technology Company</h2>
-     </div>
+    <div class="f1-room1">
+      <div class="f1-room1-bed1">
+        <h1>ATOM CODE</h1>
+        <h2>A Technology Company</h2>
+      </div>
       <div class="f1-room1-bed2">
         <p class="discription">
           "Welcome to Atomcode – your trusted partner in technology solutions! 
@@ -30,29 +32,24 @@
           From PLC systems to DCS systems and Android apps, we deliver cutting-edge 
           solutions for your business. At Atomcode, innovation meets precision to 
           bring your ideas to life."
-       </p>
+        </p>
       </div>
       <div>
         <img src="name.gif" class="name-s" id="image">
       </div>
       <script>
-            setTimeout(() => {
-  const image = document.getElementById('image');
-  image.src = "name.png"; // Replace with the name of your .png file
-}, 2400); // 2400 milliseconds = 2.4 seconds
-
+        setTimeout(() => {
+          const image = document.getElementById('image');
+          image.src = "name.png"; // Replace with the name of your .png file
+        }, 2300); // 2300 milliseconds = 2.3 seconds
       </script>
-      
-   </div>
-   <div class="f1-room2">
-    <div class="wave-shape wave-1"></div>
-
+    </div>
+    <div class="f1-room2">
+      <div class="wave-shape wave-1"></div>
+    </div>
   </div>
-
-  </div>
-   <nav class="navbar">
+  <nav class="navbar">
     <img src="logo.gif" class="logo" alt="Website Logo">
-
     <ul class="navbar__menu">
       <li class="navbar__item">
         <a href="#" class="navbar__link"><i data-feather="home"></i><span>Home</span></a>
@@ -66,32 +63,46 @@
       <li class="navbar__item">
         <a href="#" class="navbar__link"><i data-feather="folder"></i><span>Projects</span></a>        
       </li>
-     
       <li class="navbar__item">
         <a href="#" class="navbar__link"><i data-feather="phone"></i><span>Contact</span></a>        
       </li>
-      
     </ul>
   </nav>
- 
 
+  <div class="marquee">
+        <h3>Solutions With Code!</h3>
+  </div>
+  
+  <div class="data-text" id="scrollText">
+    <p class="text">
+        Website Development – Crafting stunning, responsive websites that captivate and perform.
+        <br><br>
+        Custom Software – Building tailored software to streamline operations and enhance productivity.
+        <br><br>
+        Web Solutions – Diagnosing and solving complex web issues with efficiency.
+        <br><br>
+        Automation Systems – Expertise in PLC and DCS systems, ensuring smooth industrial automation.
+        <br><br>
+        Android Apps – Designing and developing Android applications that engage users and drive results.
+    </p>
+</div>
+
+<div class="custom-container">
+    <iframe src="op.html" width="100%" height="100%" style="border: none;"></iframe>
+</div>
   <!-- Feather Icons Script -->
   <script src="https://unpkg.com/feather-icons"></script>
   <script>
     feather.replace();
-    </script>  
+  </script>
   <div class="atom-bg">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="main.js"></script>
-  </div>    
-  <div class="custom-cursor site-wide">
-    <div class="pointer"></div>
   </div>
-  <div class="cursor" id="cursor"></div>
   <div class="html-bg" id="container3DHTML"></div>
   <div class="css-bg" id="container3DCSS"></div>
   <div class="js-bg" id="container3DJS"></div>
-  
+</div>
+  <!-- Additional scripts for creating logos and detecting devices -->
   <script type="module">
     import * as THREE from "https://cdn.skypack.dev/three@0.129.0/build/three.module.js";
     import { OrbitControls } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/controls/OrbitControls.js";
@@ -222,8 +233,8 @@
         requestAnimationFrame(animate);
   
         // Rotate the logo group based on mouse position
-        logoGroup.rotation.y = mouseX * Math.PI;
-        logoGroup.rotation.x = mouseY * Math.PI;
+        logoGroup.rotation.y += 0.01; // Continuous rotation along Y-axis
+        logoGroup.rotation.x += 0.01; // Continuous rotation along X-axis
   
         // Move the logo group to the right side of the screen from depth (speed up the movement)
         if (logoGroup.position.x > 0) {
@@ -262,13 +273,12 @@
   
     // Create JS logo with gradient and adjusted size
     createLogo("container3DJS", "JS", ["#f0db4f", "#e5a228"], 0.55); // Increased text size for JS logo
-
   </script>
   <script>
     // Function to detect the device and take appropriate action
-  function detectDeviceAndHandle() {
+    function detectDeviceAndHandle() {
       const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
+  
       // Check if the device is a mobile or tablet
       if (/android/i.test(userAgent) || 
           /iPad|iPhone|iPod/.test(userAgent) || 
@@ -277,10 +287,11 @@
           // Redirect to 𝓦𝓮𝓵𝓬𝓸𝓶𝓮 for mobile or tablet
           window.location.href = "𝓦𝓮𝓵𝓬𝓸𝓶𝓮";
       } 
-  }
-
-  // Call the function when the page loads
-  window.onload = detectDeviceAndHandle;
+    }
+  
+    // Call the function when the page loads
+    window.onload = detectDeviceAndHandle;
   </script>
+
 </body>
 </html>
