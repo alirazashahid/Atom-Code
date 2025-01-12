@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icon Buttons</title>
+    <style>
+        :root {
+            --h: 3;
+            --d: calc(var(--h) * 1em);
+            --p: 0.25em;
+        }
+
+        html, body, form, button { display: grid; }
+        html { height: 100%; }
+        body { background: #2c2c2c00; }
+        svg { position: absolute; }
+
+        form {
+            grid-gap: calc(2 * var(--p));
+            grid-template-columns: repeat(2, max-content);
+            place-self: center;
+            position: relative;
+            padding: calc(2 * var(--p));
+            color: #121212;
+            font: clamp(1.25rem, 9vmin, 7.5rem)/ var(--h) nunito;
+            filter: drop-shadow(0.125em 0.25em 0.125em #121212);
+        }
+
+        form::before {
+            position: absolute;
+            z-index: -1;
+            inset: 0;
+            border-radius: 1em;
+            box-shadow: inset 0 0 1px hsla(0, 0%, 100%, 0.5), inset 0 0.125em 0.125em -0.125em hsla(0, 0%, 100%, 0.5);
+            background: #232323;
+            filter: url(#grainy);
+            content: '';
+        }
+
+        button {
+            border: none;
+            padding: calc(0.75 * var(--p)) var(--p) calc(1.25 * var(--p));
+            border-radius: 50%;
+            box-shadow: inset 0 0 0.1875em hsla(25, 100%, 65%, calc(var(--light, 0) * 0.65)), inset 0 0.75em 1px #161616, 0 0.0625em 0.1875em hsla(0, 0%, 100%, 0.1), 0.125em 0.125em 0.25em hsla(0, 0%, 0%, 0.125), 0 0.0625em 0.375em hsla(0, 0%, 0%, 0.1875); 
+            background: radial-gradient(circle calc(0.5 * var(--d)) at 50% calc(100% - 0.5 * var(--d)), #101010 100%, transparent) #090909;
+            font: inherit;
+            text-transform: uppercase;
+            transition: all 0.15s ease-out;
+            cursor: pointer;
+        }
+
+        button:focus { outline: none; }
+        button:hover, button:focus { --light: 1; }
+        button:active { --press: 1; --light: 0; }
+
+        button::before, button::after {
+            grid-area: 1 / 1;
+            z-index: 1;
+            width: var(--d); height: var(--d);
+            border-radius: inherit;
+            transform: translateY(calc(var(--press, 0) * 0.25 * var(--p)));
+            transition: transform 0.25s ease-out;
+        }
+
+        button::before {
+            box-shadow: inset 0 0.125em 0.125em -0.125em hsla(0, 0%, 100%, 0.5), inset 0 var(--d) 0.125em calc(-0.75 * var(--d)) currentColor, inset 0 var(--d) 0.25em calc(-0.75 * var(--d)) currentColor, inset 0 var(--d) 0.375em calc(-0.75 * var(--d)) currentColor, inset 0 var(--d) 0.5em calc(-0.75 * var(--d)) currentColor, inset 0 var(--d) 0.625em calc(-0.75 * var(--d)) currentColor, inset 0 var(--d) 0.75em calc(-0.75 * var(--d)) currentColor, inset 0 var(--d) 0.875em calc(-0.75 * var(--d)) currentColor, inset 0 var(--d) 1em calc(-0.75 * var(--d)) currentColor;
+            background: linear-gradient(currentColor 15%, transparent 65%), radial-gradient(circle calc(0.4375 * var(--d)), #3e3e3e 100%, currentColor);
+            color: #313131;
+            filter: url(#grainy) drop-shadow(0 0 #000);
+            content: '';
+        }
+
+        button::after {
+            color: #010101;
+            filter: url(#emboss) url(#sinset) url(#grainy) drop-shadow(1px 0.0625em 1px #000);
+            content: '';
+            display: block;
+            width: 1em;
+            height: 1em;
+            margin: auto;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        button[data-icon="message-circle"]::after {
+    background-image: url('https://unpkg.com/feather-icons@4.28.0/dist/icons/message-circle.svg');
+}
+
+
+        button[data-icon="instagram"]::after {
+            background-image: url('https://unpkg.com/feather-icons@4.28.0/dist/icons/instagram.svg');
+        }
+
+        button[data-icon="mail"]::after {
+            background-image: url('https://unpkg.com/feather-icons@4.28.0/dist/icons/mail.svg');
+        }
+
+        button[data-icon="phone"]::after {
+            background-image: url('https://unpkg.com/feather-icons@4.28.0/dist/icons/phone.svg');
+        }
+    </style>
+</head>
+<body>
+    <svg width="0" height="0" aria-hidden="true">
+        <filter id="grainy" x="0" y="0" width="100%" height="100%">
+            <feTurbulence type="fractalNoise" baseFrequency=".753" />
+            <feColorMatrix type="saturate" values="0" />
+            <feComposite in="SourceGraphic" operator="in" />
+        </filter>
+        
+        <filter id="sinset">
+            <feGaussianBlur stdDeviation="1" />
+            <feComposite operator="out" in="SourceGraphic" result="inverse" />
+            <feFlood flood-color="hsla(0, 0%, 100%, .375)" />
+            <feComposite operator="in" in2="inverse" />
+            <feComposite operator="over" in2="SourceGraphic" />
+        </filter>
+        
+        <filter id="emboss">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="9" />
+            <feSpecularLighting surfaceScale="2" specularConstant=".75" specularExponent="17" lighting-color="#ededed">
+                <fePointLight x="50%" y="-29000" z="20000" />
+            </feSpecularLighting>
+            <feComposite in2="SourceAlpha" operator="in" />
+            <feComposite in="SourceGraphic" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" />
+        </filter>
+    </svg>
+    
+    <form>
+      <button type="button" aria-label="press me: message-circle icon" data-icon="message-circle"></button>
+      <button type="button" aria-label="press me: instagram icon" data-icon="instagram"></button>
+        <button type="button" aria-label="press me: mail icon" data-icon="mail"></button>
+        <button type="button" aria-label="press me: phone icon" data-icon="phone"></button>
+    </form>
+</body>
+</html>
