@@ -1,15 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&display=swap');
-
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  overflow-x: hidden;
-}
-
 body {
+  margin: 0;
+  overflow: hidden;
   font-family: 'Montserrat Alternates', sans-serif !important;
   position: relative;
   transition: background 0.8s, color 0.5s;
@@ -21,94 +13,38 @@ body {
   radial-gradient(at 0% 100%, rgba(161, 255, 138, 0.486) 0px, transparent 50%),
   radial-gradient(at 80% 100%, rgba(107, 102, 255, 0.637) 0px, transparent 50%),
   radial-gradient(at 0% 0%, rgba(101, 253, 207, 0.507) 0px, transparent 50%);
-  width: 100%;
-  height: 100%;
   color: #fff !important;
+  cursor: grab;
+
 }
-
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 12px;  /* Adjust the width for a thicker scrollbar */
-  }
-  
-  ::-webkit-scrollbar-track {
-  background: rgba(255, 192, 203, 0);  /* Transparent track */
-  border-radius: 10px;  /* Rounded corners for the track */
-  }
-  
-  ::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #00aeff, #a68eff);  /* Gradient color for the thumb */
-  border-radius: 10px;  /* Rounded corners for the thumb */
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(45deg, #00aeff, #8c74d6);  /* Slightly darker gradient on hover */
-  }
-  
-
 .atom-bg {
   width: 100%;
   height: 625px;
   display: block;
   /* border: 3.1px solid black; */
-  margin-top: -175px;
+  /* margin-top: -175px; */
 }
 .css-bg {
   width: 100%;
-  height: 625px;
   display: block;
-  /* border: 3.1px solid black; */
+  z-index: 5;  /* Keep it below #inner2 */
 }
+/* Background Section */
 .js-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 625px;
-  display: block;
-  /* border: 3.1px solid black; */
+  height: 100%;
+  z-index: 0; /* Lower z-index to place it behind content */
+  background: linear-gradient(135deg, #0c52a100, #0c5db900); /* Placeholder for 3D effect */
 }
 .html-bg{
     width: 100%;
-    height: 625px;
     display: block;
     /* border: 3.1px solid black; */
 
 }
-iframe {
-  overflow: hidden;
-}
-.custom-cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 9999;
-  display: none; /* Initially hidden */
-
-}
-
-.site-wide {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 2px solid rgb(6, 10, 10);
-}
-
-.site-wide .pointer {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background-color: black;
-  transition: width 0.1s ease-in-out, height 0.1s ease-in-out;
-}
-
-.site-wide.active .pointer {
-  width: 20px;
-  height: 20px;
-}  
-
 .navbar {
   position: fixed;
   top: 7rem;
@@ -220,93 +156,105 @@ pointer-events: none;
   z-index: 100; /* Ensure the logo stays above other elements */
 }
 
-.firstflor{
+.section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  overflow: hidden;
+}
+#section1 {
+  background: #ffffff00; /* Transparent background */
+}
+
+
+#section2 {
+  background: #ffffff00;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+}
+.inner-section {
+  min-width: 100vw;
+  height: 100vh;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+  font-size: 2rem;
+  color: #fff;
+  overflow: hidden;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  position: relative;
+  z-index: 10; /* Higher z-index to overlay the background */
+}
+
+.inner-section::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Edge */
+}
+
+    
+#inner1 {
+  background: #ffffff00;
+  position: relative;
+}
+#inner2 {
+  background: #33ff5800;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;  /* Allow vertical scrolling */
+  z-index: 30;  /* Higher z-index to overlay other elements */
+}
+
+
+#inner3 {
+  background: #b8b8b800;
+  position: relative;
+
+}
+
+#section3 {
+  background: #ffffff00;
+  position: relative;
+}
+.firstflor {
   width: 90%;
   height: 375px;
-  z-index: 20;
   position: absolute;
-  margin-top: 113px;
   margin-left: 90px;
   display: flex;
-}
-
-.f1-room1{
-  width: 49.9%;
-  height: 375px;
-  position: relative;
-  animation: slideFromTop 1.5s ease forwards;
-  text-shadow: 0px 0px 4px black;
-  font-family:  sans-serif;
-}
-
-.f1-room1-bed1 {
-  height: 25%;
-  padding-left: 4%;
-  color: #fff !important;
-}
-
-h1, h2 {
-  font-family: 'Montserrat Alternates', sans-serif;
-}
-
-h1 {
-  font-size: 2rem;
-  margin: 0;
-  margin-bottom: 2px;
-}
-
-h2 {
-  font-size: 1.5rem;
   overflow: hidden;
-  white-space: nowrap;
-  width: 0;
-  animation: typing 5s steps(30, end) forwards 1s, hideBorder 1s forwards 3.85s;
-  margin: 0px;
-  border-right: 2px solid black;
+  margin-top: -50px;
 }
 
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-@keyframes hideBorder {
-  to { border-right: 0px; }
-}
-
-.f1-room1-bed2{
-  width: 95%;
-  margin-top: 0px !important;
-  margin-left: 0px !important;
-  text-shadow: 0px 0px 0.2px !important;
-  z-index: 20;
-  color: black;
-  text-align: justify;
-  padding-left: 20px;
-  font-family: 'Montserrat Alternates', sans-serif !important;
-
-
-}
-p{
-  margin: 0;
-}
-.name-s {
-  width: 75%;
-  margin-left: 30%;
-  height: 150px;
-  filter: grayscale(100%);
-  background-size: cover;
-  transition: opacity 1.5s ease-in-out;
-}
-.hidden {
-  opacity: 0;
-}
-
-
-.f1-room2{
-  width: 49.9%;
-  height: 375px;
+.f1-room1, .f1-room2 {
+  width: 50%;
+  height: 100%;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0px 0px 4px black;
+  font-family: sans-serif;
+  flex-direction: column;
+
+}
+
+.f1-room1 {
+  animation: slideFromTop 1.5s ease forwards;
+}
+
+.f1-room2 {
   animation: slideFromBottom 1.5s ease forwards;
 }
 
@@ -330,6 +278,66 @@ p{
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+.f1-room1-bed1{
+  width: 100%;
+  height: 20%;
+  float: left;
+  color: #fff;
+}
+
+h1, h2 {
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0;
+  margin-bottom: 2px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typing 5s steps(30, end) forwards 1s, hideBorder 2s forwards 3.85s;
+  margin: 0px;
+  border-right: 2px solid black;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes hideBorder {
+  to { border-right: 0px; }
+}
+
+.f1-room1-bed2{
+  width: 100%;
+  height: 80%;
+  float: left;
+  text-align: justify;
+  text-shadow: 0px 0px 0.2px !important;
+  font-family: 'Montserrat Alternates', sans-serif !important;
+  color: black;
+}
+.f1-room1-bed2 p {
+  font-size: 1rem; /* Adjust this value to your desired size */
+  font-weight: normal; /* Ensure the font is not bold */
+
+}
+
+.name-s {
+  width: 55%;
+  margin-left: 30%;
+  height: 115px;
+  filter: grayscale(100%);
+  background-size: cover;
+  transition: opacity 1.5s ease-in-out;
 }
 
 .wave-shape {
@@ -380,37 +388,33 @@ z-index: 1;
     transform: translateY(-30px) rotate(0deg);
 }
 }    
-.marquee {
-  z-index: 20;
-  color: #eee0;
-  overflow: hidden;
-  position: relative;
+.data-text {
   display: flex;
-  align-items: center;
-  top: 495px;
-  width: 100%;
-  height: 16vh;
-  animation: none;
-  justify-content: center;
-  font-size: 3.17em;
-  transition: text-shadow 0.3s ease; /* Smooth transition for shadow effect */
+  width: 95%;
+  height: 100vh; /* Full viewport height */
+  position: absolute;
+  left: 0;
+  margin-left: 2%;
+  pointer-events: none;
+  flex-direction: column;
+  z-index: 10; /* Adjust the z-index to ensure 3D model interactions are not blocked */
 }
+   
+.marquee {
+  color: #eee0;
+  animation: none;
+  font-size: 1.17em;
+  transition: text-shadow 0.3s ease; /* Smooth transition for shadow effect */
+  text-align: center;
+  height: 75px;
+  pointer-events: all;
+
+}
+
 
 .marquee:hover {
   text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5); /* Adjust the shadow values as needed */
-}.data-text {
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  width: 100%;
-  height: 100vh; /* Full viewport height */
-  position: absolute;
-  top: calc(435px + 16vh); /* Places it right after the marquee */
-  left: 0;
-  z-index: 10; /* Adjust the z-index to ensure 3D model interactions are not blocked */
-  pointer-events: none; /* Ensure it doesn't block mouse events */
 }
-
 .text {
   font-size: 1.5rem;
   text-align: justify;
@@ -418,27 +422,180 @@ z-index: 1;
   transform: translateY(50px);
   transition: opacity 1.5s ease, transform 2.5s ease;
   max-width: 90%;
-  margin: auto;
+  margin: 0px;
   color: #000;
   margin-left: 8%;
   text-align-last: center;
-  text-align: center;
   text-shadow: 0px 0px 0px ;
 }
-
+iframe {
+  pointer-events: all; /* Disable interactions with the iframe */
+}
 .custom-container {
-  z-index: 20;
   color: #eee0;
-  overflow: hidden;
   position: absolute;
-  display: flex;
-  align-items: center;
-  top: calc(980px + 16vh + 100px); 
-  animation: none;
-  justify-content: center;
+  width: 99%;
+  height: 640px;
+  overflow: hidden;
+  z-index: 5;
+  pointer-events: none;  /* Disable interactions by default */
+}
+.custom-container-active-pointer1 {
+  position: absolute;
   width: 100%;
-  height: 720px;
-  scroll-snap-align: none ;
-
+  height: 280px;
+  top: 80%;
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center the div exactly */
+  background-color: rgba(0, 0, 0, 0); /* Semi-transparent background */
+  pointer-events: all; /* Enable interactions */
+  z-index: 10; /* Ensure it overlays other content */
+  border-radius: 5px; /* Optional: Rounded corners for better visuals */
+}
+.custom-container-active-pointer2 {
+  position: absolute;
+  width: 100%;
+  height: 380px; /* Adjust to 20px or 35px as needed */
+  top:  10%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center the div exactly */
+  background-color: rgba(0, 0, 0, 0); /* Semi-transparent background */
+  pointer-events: all; /* Enable interactions */
+  z-index: 10; /* Ensure it overlays other content */
+  border-radius: 5px; /* Optional: Rounded corners for better visuals */
 }
 
+/* Profile card styles reused from the "Our Team" code */
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  position: relative; /* Ensures stacking context */
+  
+}
+
+
+.profile-card {
+  position: relative;
+  font-family: sans-serif;
+  width: 200px;
+  height: 200px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 50%;
+  box-shadow: 0 0 22px #3336;
+  transition: .6s;
+  margin:0px;
+}
+
+.profile-card:hover {
+  border-radius: 10px;
+  height: 260px;
+}
+
+.profile-card .img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: .6s;
+  z-index: 99;
+}
+
+.profile-card:hover .img {
+  transform: translateY(-60px);
+}
+
+.img img {
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 22px #3336;
+  transition: .6s;
+}
+
+.profile-card:hover img {
+  border-radius: 10px;
+}
+
+.caption {
+  text-align: center;
+  transform: translateY(-80px);
+  opacity: 0;
+  transition: .6s;
+}
+
+.profile-card:hover .caption {
+  opacity: 1;
+}
+
+.caption h3 {
+  font-size: 21px;
+  font-family: sans-serif;
+  margin-bottom: 2px;
+  color: #000;
+}
+
+.caption p {
+  font-size: 15px;
+  color: #0c52a1;
+  font-family: sans-serif;
+  margin: 2px 0 9px 0;
+}
+
+.caption .social-links a {
+  color: #333;
+  margin-right: 15px;
+  font-size: 21px;
+  transition: .6s;
+}
+
+.social-links a:hover {
+  color: #0c52a1;
+}
+    /* Scrollable Pane (Overlay) */
+    .scroll-ale-pate1 {
+      height: 100%;
+      width: 26%;
+      background-color: rgba(0, 0, 0, 0); /* Semi-transparent black */
+      position: absolute; /* Overlay position */
+      top: 0; /* Start from the top of the parent */
+      left: 0; /* Start from the left of the parent */
+      z-index: 10; /* Ensure it overlays other content */
+    }
+    .scroll-ale-pate2 {
+      height: 100%;
+      width: 26%;
+      background-color: rgba(0, 0, 0, 0); /* Semi-transparent black */
+      position: absolute; /* Overlay position */
+      top: 0; /* Start from the top of the parent */
+      right: 0; /* Start from the left of the parent */
+      z-index: 10; /* Ensure it overlays other content */
+    }
+    .scroll-ale-pate3 {
+      height: 18%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0); /* Semi-transparent black */
+      position: absolute; /* Overlay position */
+      top: 0; /* Start from the top of the parent */
+      left: 0; /* Start from the left of the parent */
+      z-index: 10; /* Ensure it overlays other content */
+    }
+    .scroll-ale-pate4 {
+      height: 18%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0); /* Semi-transparent black */
+      position: absolute; /* Overlay position */
+      bottom: 0; /* Start from the top of the parent */
+      left: 0; /* Start from the left of the parent */
+      z-index: 10; /* Ensure it overlays other content */
+    }
+/* Other Content */
+.but23 {
+  border: none;
+  padding: 10px 20px;
+  background-color:  rgba(0, 0, 0, 0)bff;
+  color: white;
+  cursor: pointer;
+  z-index: 1; /* Ensure it stays below the overlay */
+}
