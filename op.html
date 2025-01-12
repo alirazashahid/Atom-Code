@@ -115,6 +115,31 @@
             </div>
         </div>
     </div>
- 
+ <script>
+         // JavaScript code to make scrollbars transparent
+document.documentElement.style.setProperty('scrollbar-width', 'thin'); // For Firefox
+document.documentElement.style.setProperty('scrollbar-color', 'transparent transparent'); // For Firefox
+
+// For Webkit browsers (Chrome, Safari, etc.)
+const style = document.createElement('style');
+style.innerHTML = `
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+`;
+
+document.head.appendChild(style);
+
+    </script>
 </body>
 </html>
