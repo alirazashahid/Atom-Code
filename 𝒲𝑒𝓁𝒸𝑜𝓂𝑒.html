@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
   <title>Atom Code</title>
   <link rel="icon" href="images/logo.png" type="image/png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
@@ -13,41 +13,25 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900">
 
-  <link rel="stylesheet" href="style.css">   
 </head>
-<body onclick="changeColor()">
-  <div class="threeD-bg">
+<body  onclick="changeColor()">
+  <!-- <audio id="background-audio" src="atomcode.mp3" autoplay loop></audio>
+  <script>
+    // Play audio on user interaction
+    document.body.addEventListener('click', () => {
+      const audio = document.getElementById('background-audio');
+      audio.play().catch(error => {
+        console.log('Audio playback failed:', error);
+      });
+    });
+</script> -->
+  <script src="https://unpkg.com/feather-icons"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    feather.replace();
+  });
+</script>
 
-  <div class="firstflor">
-    <div class="f1-room1">
-      <div class="f1-room1-bed1">
-        <h1>ATOM CODE</h1>
-        <h2>A Technology Company</h2>
-      </div>
-      <div class="f1-room1-bed2">
-        <p class="discription">
-          "Welcome to Atomcode – your trusted partner in technology solutions! 
-          We specialize in crafting stunning websites, solving complex web issues, 
-          and programming custom software tailored to your needs. 
-          From PLC systems to DCS systems and Android apps, we deliver cutting-edge 
-          solutions for your business. At Atomcode, innovation meets precision to 
-          bring your ideas to life."
-        </p>
-      </div>
-      <div>
-        <img src="name.gif" class="name-s" id="image">
-      </div>
-      <script>
-        setTimeout(() => {
-          const image = document.getElementById('image');
-          image.src = "name.png"; // Replace with the name of your .png file
-        }, 2300); // 2300 milliseconds = 2.3 seconds
-      </script>
-    </div>
-    <div class="f1-room2">
-      <div class="wave-shape wave-1"></div>
-    </div>
-  </div>
   <nav class="navbar">
     <img src="logo.gif" class="logo" alt="Website Logo">
     <ul class="navbar__menu">
@@ -68,218 +52,419 @@
       </li>
     </ul>
   </nav>
-
-  <div class="marquee">
-        <h3>Solutions With Code!</h3>
-
-  </div>
-  <div class="marquee">
-    <h3>What We can Do !</h3>
-
+  <div id="section1" class="section atom-bg">
+    <div class="atom-bg">
+        <script src="main.js"></script>
+    </div>
+    <div class="firstflor">
+        <div class="f1-room1">
+            <div class="f1-room1-bed1">
+                <h1>ATOM CODE</h1>
+                <h2>A Technology Company</h2>
+            </div>
+            <div class="f1-room1-bed2">
+                <p class="discription">
+                    "Welcome to Atomcode – your trusted partner in technology solutions! 
+                    We specialize in crafting stunning websites, solving complex web issues, 
+                    and programming custom software tailored to your needs. 
+                    From PLC systems to DCS systems and Android apps, we deliver cutting-edge 
+                    solutions for your business. At Atomcode, innovation meets precision to 
+                    bring your ideas to life."
+                </p>
+                <img src="name.gif" class="name-s" id="image">
+                <script>
+                    setTimeout(() => {
+                        const image = document.getElementById('image');
+                        image.src = "name.png"; // Replace with the name of your .png file
+                    }, 2300); // 2300 milliseconds = 2.3 seconds
+                </script>
+            </div>
+        </div>
+        <div class="f1-room2">
+            <div class="wave-shape wave-1"></div>
+        </div>
+    </div>
 </div>
+<div id="section2">
+    <div id="inner1" class="inner-section">
+        <div class="html-bg" id="container3DHTML"></div>
+        <div class="data-text" id="scrollText">
+            <div class="marquee">
+                <h3>What We can Do !</h3>
+            </div>
+            <p class="text">
+                Website Development – Crafting stunning, responsive websites that captivate and perform.
+                <br><br>
+                Custom Software – Building tailored software to streamline operations and enhance productivity.
+                <br><br>
+                Web Solutions – Diagnosing and solving complex web issues with efficiency.
+                <br><br>
+                Automation Systems – Expertise in PLC and DCS systems, ensuring smooth industrial automation.
+                <br><br>
+                Android Apps – Designing and developing Android applications that engage users and drive results.
+            </p>
+            <div class="marquee">
+                <h3>Solutions With Code!</h3>  
+            </div>
+        </div>
+    </div>
+    <div id="inner2" class="inner-section">
+        <div class="css-bg" id="container3DCSS"></div>
+        <div class="custom-container">
+          <iframe src="op.html" width="100%" height="98%" style="border: none;"></iframe>
+          <div class="custom-container-active-pointer1"></div>
+          <div class="custom-container-active-pointer2"></div>
+      </div>
+      
+    </div>
+    <div id="inner3" class="inner-section">
+      <!-- Background Element -->
+      <div class="js-bg" id="container3DJS"></div>
+    
+      <!-- Content Section -->
+      <div class="main">
+          <div class="profile-card">
+              <div class="img">
+                  <img src="https://1.bp.blogspot.com/-8c7QTLoyajs/YLjr2V6KYRI/AAAAAAAACO8/ViVPQpLWVM0jGh3RZhh-Ha1-1r3Oj62wQCNcBGAsYHQ/s16000/team-1-3.jpg">
+              </div>
+              <div class="caption">
+                  <h3>Vin Diesel</h3>
+                  <p>Senior App Developer</p>
+                  <div class="social-links">
+                      <a href="#"><i class="fab fa-facebook"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                  </div>
+              </div>
+          </div>
+          <div class="profile-card">
+              <div class="img">
+                  <img src="https://1.bp.blogspot.com/-vhmWFWO2r8U/YLjr2A57toI/AAAAAAAACO4/0GBonlEZPmAiQW4uvkCTm5LvlJVd_-l_wCNcBGAsYHQ/s16000/team-1-2.jpg">
+              </div>
+              <div class="caption">
+                  <h3>David Corner</h3>
+                  <p>Front End Developer</p>
+                  <div class="social-links">
+                      <a href="#"><i class="fab fa-facebook"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                  </div>
+              </div>
+          </div>
+          <div class="profile-card">
+              <div class="img">
+                  <img src="https://1.bp.blogspot.com/-AO5j2Y9lzME/YLjr3mxiqAI/AAAAAAAACPE/KAaYYTtQTrgBE3diTbxGoc4U4fCGx-C2gCNcBGAsYHQ/s16000/team-1-4.jpg">
+              </div>
+              <div class="caption">
+                  <h3>Tom Cruise</h3>
+                  <p>Full Stack Developer</p>
+                  <div class="social-links">
+                      <a href="#"><i class="fab fa-facebook"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    
+  
+</div>
+<div id="section3" class="section">
+  <iframe src="Ur.html" width="100%" height="98%" class="but23"></iframe>
+<div class="scroll-ale-pate1"></div>
+<div class="scroll-ale-pate2"></div>
+<div class="scroll-ale-pate3"></div>
+<div class="scroll-ale-pate4"></div>
+</div>
+<script>
+   let currentSection = 1; // Track the current main section
+const section2 = document.getElementById("section2"); // Section 2 container
+const innerSections = section2.querySelectorAll(".inner-section"); // Inner sections in Section 2
+let currentInnerIndex = 0; // Track the current inner section within Section 2
+let isScrolling = false; // Prevent overlapping scroll events
 
-  <div class="data-text" id="scrollText">
-    <p class="text">
-        Website Development – Crafting stunning, responsive websites that captivate and perform.
-        <br><br>
-        Custom Software – Building tailored software to streamline operations and enhance productivity.
-        <br><br>
-        Web Solutions – Diagnosing and solving complex web issues with efficiency.
-        <br><br>
-        Automation Systems – Expertise in PLC and DCS systems, ensuring smooth industrial automation.
-        <br><br>
-        Android Apps – Designing and developing Android applications that engage users and drive results.
-    </p>
-</div>
+const scrollDuration = 800; // Duration of smooth scrolling (in ms)
 
-<div class="custom-container">
-    <iframe src="op.html" width="100%" height="100%" style="border: none;"></iframe>
-</div>
-  <!-- Feather Icons Script -->
-  <script src="https://unpkg.com/feather-icons"></script>
-  <script>
-    feather.replace();
-  </script>
-  <div class="atom-bg">
-    <script src="main.js"></script>
-  </div>
-  <div class="html-bg" id="container3DHTML"></div>
-  <div class="css-bg" id="container3DCSS"></div>
-  <div class="js-bg" id="container3DJS"></div>
-</div>
-  <!-- Additional scripts for creating logos and detecting devices -->
-  <script type="module">
-    import * as THREE from "https://cdn.skypack.dev/three@0.129.0/build/three.module.js";
-    import { OrbitControls } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/controls/OrbitControls.js";
-  
-    function createGradientTexture(color1, color2) {
-      const size = 512;
-      const canvas = document.createElement('canvas');
-      canvas.width = size;
-      canvas.height = size;
-      const context = canvas.getContext('2d');
-  
-      const gradient = context.createLinearGradient(0, 0, size, size);
-      gradient.addColorStop(0, color1);
-      gradient.addColorStop(1, color2);
-  
-      context.fillStyle = gradient;
-      context.fillRect(0, 0, size, size);
-  
-      const texture = new THREE.CanvasTexture(canvas);
-      return texture;
+// Helper function to check if an element is fully visible
+const isFullyVisible = (element) => {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.bottom <= window.innerHeight * 1.1 // Allow some margin for zoom adjustments
+    );
+};
+
+// Helper function to perform smooth scrolling to a specific element
+const scrollToElement = (element) => {
+    isScrolling = true; // Set scrolling flag to true
+    element.scrollIntoView({ behavior: "smooth", block: "start" }); // Smooth scroll
+    setTimeout(() => {
+        isScrolling = false; // Reset scrolling flag after animation ends
+    }, scrollDuration);
+};
+
+// Main scroll handler for wheel events
+window.addEventListener("wheel", (e) => {
+    if (isScrolling) return; // Ignore scroll events if already scrolling
+
+    const delta = e.deltaY; // Get scroll direction
+
+    // Section 1 -> Section 2
+    if (currentSection === 1 && delta > 0) {
+        scrollToElement(document.getElementById("section2"));
+        currentSection = 2; // Move to Section 2
+        currentInnerIndex = 0; // Reset to the first inner section
+    } 
+    
+    // Inside Section 2: Handle inner-section scrolling
+    else if (currentSection === 2) {
+        if (delta > 0 && currentInnerIndex < innerSections.length - 1) {
+            // Scroll down to the next inner section
+            currentInnerIndex++;
+            scrollToElement(innerSections[currentInnerIndex]);
+        } else if (delta < 0 && currentInnerIndex > 0) {
+            // Scroll up to the previous inner section
+            currentInnerIndex--;
+            scrollToElement(innerSections[currentInnerIndex]);
+        } else if (delta > 0 && currentInnerIndex === innerSections.length - 1) {
+            // If at the last inner-section, move to Section 3
+            if (isFullyVisible(innerSections[currentInnerIndex])) {
+                scrollToElement(document.getElementById("section3"));
+                currentSection = 3;
+            }
+        } else if (delta < 0 && currentInnerIndex === 0) {
+            // If at the first inner-section, move back to Section 1
+            if (isFullyVisible(innerSections[currentInnerIndex])) {
+                scrollToElement(document.getElementById("section1"));
+                currentSection = 1;
+            }
+        }
     }
+
+    // Section 3 -> Section 2
+    else if (currentSection === 3 && delta < 0) {
+        scrollToElement(document.getElementById("section2"));
+        currentSection = 2; // Move to Section 2
+        currentInnerIndex = innerSections.length - 1; // Start at the last inner section
+    }
+});
+
+// Ensure correct alignment on window resize
+window.addEventListener("resize", () => {
+    const activeSection =
+        currentSection === 1
+            ? document.getElementById("section1")
+            : currentSection === 2
+            ? innerSections[currentInnerIndex]
+            : document.getElementById("section3");
+    scrollToElement(activeSection);
+});
+
+// Ensure correct alignment on page load
+window.addEventListener("load", () => {
+    currentSection = 1; // Start at Section 1
+    scrollToElement(document.getElementById("section1"));
+});
+
+</script>
   
-    function createLogo(containerId, text, gradientColors, textSize = 0.45) {
-      // Scene setup
-      const scene = new THREE.Scene();
+ <script type="module">
+  import * as THREE from "https://cdn.skypack.dev/three@0.129.0/build/three.module.js";
+  import { OrbitControls } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/controls/OrbitControls.js";
   
-      // Camera setup
-      const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
-      camera.position.set(0, 2, 6);
+  function createGradientTexture(color1, color2) {
+    const size = 512;
+    const canvas = document.createElement('canvas');
+    canvas.width = size;
+    canvas.height = size;
+    const context = canvas.getContext('2d');
   
-      // Renderer setup
-      const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-      renderer.setSize(window.innerWidth, window.innerHeight);
-      renderer.setPixelRatio(window.devicePixelRatio);
-      document.getElementById(containerId).appendChild(renderer.domElement);
+    const gradient = context.createLinearGradient(0, 0, size, size);
+    gradient.addColorStop(0, color1);
+    gradient.addColorStop(1, color2);
   
-      // OrbitControls setup
-      const controls = new OrbitControls(camera, renderer.domElement);
-      controls.enableDamping = true;
-      controls.dampingFactor = 0.05;
-      controls.enableZoom = false;
-      controls.enablePan = false;
-      controls.enableRotate = true;
-      controls.update();
+    context.fillStyle = gradient;
+    context.fillRect(0, 0, size, size);
   
-      // Lighting setup
-      const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
-      scene.add(ambientLight);
+    const texture = new THREE.CanvasTexture(canvas);
+    return texture;
+  }
   
-      const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-      directionalLight.position.set(5, 10, 7.5);
-      scene.add(directionalLight);
+  function createLogo(containerId, text, gradientColors, textSize = 0.45) {
+    // Scene setup
+    const scene = new THREE.Scene();
   
-      // Create the logo shape
-      const logoGroup = new THREE.Group();
+    // Camera setup
+    const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera.position.set(0, 2, 6);
   
-      // Shield shape
-      const shieldShape = new THREE.Shape();
-      shieldShape.moveTo(0, 1);
-      shieldShape.lineTo(0.9, 0.8);
-      shieldShape.lineTo(0.9, -0.85);
-      shieldShape.lineTo(0, -1);
-      shieldShape.lineTo(-0.9, -0.85);
-      shieldShape.lineTo(-0.9, 0.8);
-      shieldShape.lineTo(0, 1);
+    // Renderer setup
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(window.devicePixelRatio);
+    document.getElementById(containerId).appendChild(renderer.domElement);
   
-      const shieldExtrudeSettings = {
-        depth: 0.1,
+    // OrbitControls setup
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.05;
+    controls.enableZoom = false;
+    controls.enablePan = false;
+    controls.enableRotate = true;
+    controls.update();
+  
+    // Lighting setup
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
+    scene.add(ambientLight);
+  
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+    directionalLight.position.set(5, 10, 7.5);
+    scene.add(directionalLight);
+  
+    // Create the logo shape
+    const logoGroup = new THREE.Group();
+  
+    // Shield shape
+    const shieldShape = new THREE.Shape();
+    shieldShape.moveTo(0, 1);
+    shieldShape.lineTo(0.9, 0.8);
+    shieldShape.lineTo(0.9, -0.85);
+    shieldShape.lineTo(0, -1);
+    shieldShape.lineTo(-0.9, -0.85);
+    shieldShape.lineTo(-0.9, 0.8);
+    shieldShape.lineTo(0, 1);
+  
+    const shieldExtrudeSettings = {
+      depth: 0.1,
+      bevelEnabled: true,
+      bevelThickness: 0.05,
+      bevelSize: 0.05,
+      bevelSegments: 1
+    };
+  
+    const shieldGeometry3D = new THREE.ExtrudeGeometry(shieldShape, shieldExtrudeSettings);
+    const shieldMaterial = new THREE.MeshStandardMaterial({
+      map: createGradientTexture(gradientColors[0], gradientColors[1])
+    });
+    const shieldMesh = new THREE.Mesh(shieldGeometry3D, shieldMaterial);
+    logoGroup.add(shieldMesh);
+  
+    // Add text
+    const loader = new THREE.FontLoader();
+    loader.load('https://threejs.org/examples/fonts/helvetiker_regular.typeface.json', function (font) {
+      const textGeometry = new THREE.TextGeometry(text, {
+        font: font,
+        size: textSize,
+        height: 0.1,
+        curveSegments: 12,
         bevelEnabled: true,
         bevelThickness: 0.05,
         bevelSize: 0.05,
         bevelSegments: 1
-      };
-  
-      const shieldGeometry3D = new THREE.ExtrudeGeometry(shieldShape, shieldExtrudeSettings);
-      const shieldMaterial = new THREE.MeshStandardMaterial({
-        map: createGradientTexture(gradientColors[0], gradientColors[1])
       });
-      const shieldMesh = new THREE.Mesh(shieldGeometry3D, shieldMaterial);
-      logoGroup.add(shieldMesh);
+      const textMaterial = new THREE.MeshStandardMaterial({ color: 0xD3D3D3 });
+      const textMesh = new THREE.Mesh(textGeometry, textMaterial);
+      
+      // Compute bounding box and center the text
+      textGeometry.computeBoundingBox();
+      const centerOffsetX = -0.5 * (textGeometry.boundingBox.max.x - textGeometry.boundingBox.min.x);
+      const centerOffsetY = -0.5 * (textGeometry.boundingBox.max.y - textGeometry.boundingBox.min.y);
+      textMesh.position.set(centerOffsetX, centerOffsetY, 0.1);
+      
+      logoGroup.add(textMesh);
+    });
   
-      // Add text
-      const loader = new THREE.FontLoader();
-      loader.load('https://threejs.org/examples/fonts/helvetiker_regular.typeface.json', function (font) {
-        const textGeometry = new THREE.TextGeometry(text, {
-          font: font,
-          size: textSize,
-          height: 0.1,
-          curveSegments: 12,
-          bevelEnabled: true,
-          bevelThickness: 0.05,
-          bevelSize: 0.05,
-          bevelSegments: 1
-        });
-        const textMaterial = new THREE.MeshStandardMaterial({ color: 0xD3D3D3 });
-        const textMesh = new THREE.Mesh(textGeometry, textMaterial);
-        
-        // Compute bounding box and center the text
-        textGeometry.computeBoundingBox();
-        const centerOffsetX = -0.5 * (textGeometry.boundingBox.max.x - textGeometry.boundingBox.min.x);
-        const centerOffsetY = -0.5 * (textGeometry.boundingBox.max.y - textGeometry.boundingBox.min.y);
-        textMesh.position.set(centerOffsetX, centerOffsetY, 0.1);
-        
-        logoGroup.add(textMesh);
-      });
+    scene.add(logoGroup);
   
-      scene.add(logoGroup);
+    // Initial position of the logo group
+    logoGroup.position.set(5, 0, -5);
   
-      // Initial position of the logo group
-      logoGroup.position.set(5, 0, -5);
+    // Variables to store mouse position
+    let mouseX = 0;
+    let mouseY = 0;
   
-      // Variables to store mouse position
-      let mouseX = 0;
-      let mouseY = 0;
-  
-      // Function to handle mouse movement
-      function onMouseMove(event) {
-        const rect = document.getElementById(containerId).getBoundingClientRect();
-        mouseX = ((event.clientX - rect.left) / rect.width) * 2 - 1;
-        mouseY = -((event.clientY - rect.top) / rect.height) * 2 + 1;
-      }
-  
-      // Add event listener for mouse movement
-      document.getElementById(containerId).addEventListener('mousemove', onMouseMove, false);
-  
-      // Animation loop
-      function animate() {
-        requestAnimationFrame(animate);
-  
-        // Rotate the logo group based on mouse position
-        logoGroup.rotation.y += 0.01; // Continuous rotation along Y-axis
-        logoGroup.rotation.x += 0.01; // Continuous rotation along X-axis
-  
-        // Move the logo group to the right side of the screen from depth (speed up the movement)
-        if (logoGroup.position.x > 0) {
-          logoGroup.position.x -= 0.15;  // Increased speed
-          logoGroup.position.z += 0.05;
-        }
-  
-        controls.update();
-        renderer.render(scene, camera);
-      }
-  
-      animate();
-  
-      // Window resize handler
-      window.addEventListener('resize', () => {
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-      });
-  
-      // Hover animation
-      document.getElementById(containerId).addEventListener('mousemove', () => {
-        gsap.to(logoGroup.position, { z: 0.2, duration: 0.5 }); // Reduced zoom effect
-      });
-  
-      document.getElementById(containerId).addEventListener('mouseout', () => {
-        gsap.to(logoGroup.position, { z: 0, duration: 0.5 });
-      });
+    // Function to handle mouse movement
+    function onMouseMove(event) {
+      const rect = document.getElementById(containerId).getBoundingClientRect();
+      mouseX = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+      mouseY = -((event.clientY - rect.top) / rect.height) * 2 + 1;
     }
   
-    // Create HTML logo with gradient
-    createLogo("container3DHTML", "HTML", ["#e34f26", "#f06529"]);
+    // Add event listener for mouse movement
+    document.getElementById(containerId).addEventListener('mousemove', onMouseMove, false);
   
-    // Create CSS logo with gradient
-    createLogo("container3DCSS", "CSS", ["#264de4", "#2965f1"]);
+    // Animation loop
+    function animate() {
+      requestAnimationFrame(animate);
   
-    // Create JS logo with gradient and adjusted size
-    createLogo("container3DJS", "JS", ["#f0db4f", "#e5a228"], 0.55); // Increased text size for JS logo
-  </script>
+      // Rotate the logo group based on mouse position (only on the Y-axis for left-to-right rotation)
+      logoGroup.rotation.y += 0.01; // Continuous rotation along Y-axis
+  
+      // Move the logo group to the right side of the screen from depth (speed up the movement)
+      if (logoGroup.position.x > 0) {
+        logoGroup.position.x -= 0.15;  // Increased speed
+        logoGroup.position.z += 0.05;
+      }
+  
+      controls.update();
+      renderer.render(scene, camera);
+    }
+  
+    animate();
+  
+    // Window resize handler
+    window.addEventListener('resize', () => {
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+    });
+  
+    // Hover animation
+    document.getElementById(containerId).addEventListener('mousemove', () => {
+      gsap.to(logoGroup.position, { z: 0.2, duration: 0.5 }); // Reduced zoom effect
+    });
+  
+    document.getElementById(containerId).addEventListener('mouseout', () => {
+      gsap.to(logoGroup.position, { z: 0, duration: 0.5 });
+    });
+  }
+  
+  // Create HTML logo with gradient
+  createLogo("container3DHTML", "HTML", ["#e34f26", "#f06529"]);
+  
+  // Create CSS logo with gradient
+  createLogo("container3DCSS", "CSS", ["#264de4", "#2965f1"]);
+  
+  // Create JS logo with gradient and adjusted size
+  createLogo("container3DJS", "JS", ["#f0db4f", "#e5a228"], 0.55); // Increased text size for JS logo
+</script>
+  
   <script>
+    // JavaScript code to make scrollbars transparent
+document.documentElement.style.setProperty('scrollbar-width', 'thin'); // For Firefox
+document.documentElement.style.setProperty('scrollbar-color', 'transparent transparent'); // For Firefox
+
+// For Webkit browsers (Chrome, Safari, etc.)
+const style = document.createElement('style');
+style.innerHTML = `
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+`;
+
+document.head.appendChild(style);
+
     // Function to detect the device and take appropriate action
     function detectDeviceAndHandle() {
       const userAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -297,6 +482,491 @@
     // Call the function when the page loads
     window.onload = detectDeviceAndHandle;
   </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Atom Code</title>
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900">
 
+</head>
+<body  onclick="changeColor()">
+  <!-- <audio id="background-audio" src="atomcode.mp3" autoplay loop></audio>
+  <script>
+    // Play audio on user interaction
+    document.body.addEventListener('click', () => {
+      const audio = document.getElementById('background-audio');
+      audio.play().catch(error => {
+        console.log('Audio playback failed:', error);
+      });
+    });
+</script> -->
+  <script src="https://unpkg.com/feather-icons"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    feather.replace();
+  });
+</script>
+
+  <nav class="navbar">
+    <img src="logo.gif" class="logo" alt="Website Logo">
+    <ul class="navbar__menu">
+      <li class="navbar__item">
+        <a href="#" class="navbar__link"><i data-feather="home"></i><span>Home</span></a>
+      </li>
+      <li class="navbar__item">
+        <a href="#" class="navbar__link acp"><i data-feather="monitor"></i><span>Services</span></a>        
+      </li>
+      <li class="navbar__item">
+        <a href="#" class="navbar__link"><i data-feather="users"></i><span>Customers</span></a>        
+      </li>
+      <li class="navbar__item">
+        <a href="#" class="navbar__link"><i data-feather="folder"></i><span>Projects</span></a>        
+      </li>
+      <li class="navbar__item">
+        <a href="#" class="navbar__link"><i data-feather="phone"></i><span>Contact</span></a>        
+      </li>
+    </ul>
+  </nav>
+  <div id="section1" class="section atom-bg">
+    <div class="atom-bg">
+        <script src="main.js"></script>
+    </div>
+    <div class="firstflor">
+        <div class="f1-room1">
+            <div class="f1-room1-bed1">
+                <h1>ATOM CODE</h1>
+                <h2>A Technology Company</h2>
+            </div>
+            <div class="f1-room1-bed2">
+                <p class="discription">
+                    "Welcome to Atomcode – your trusted partner in technology solutions! 
+                    We specialize in crafting stunning websites, solving complex web issues, 
+                    and programming custom software tailored to your needs. 
+                    From PLC systems to DCS systems and Android apps, we deliver cutting-edge 
+                    solutions for your business. At Atomcode, innovation meets precision to 
+                    bring your ideas to life."
+                </p>
+                <img src="name.gif" class="name-s" id="image">
+                <script>
+                    setTimeout(() => {
+                        const image = document.getElementById('image');
+                        image.src = "name.png"; // Replace with the name of your .png file
+                    }, 2300); // 2300 milliseconds = 2.3 seconds
+                </script>
+            </div>
+        </div>
+        <div class="f1-room2">
+            <div class="wave-shape wave-1"></div>
+        </div>
+    </div>
+</div>
+<div id="section2">
+    <div id="inner1" class="inner-section">
+        <div class="html-bg" id="container3DHTML"></div>
+        <div class="data-text" id="scrollText">
+            <div class="marquee">
+                <h3>What We can Do !</h3>
+            </div>
+            <p class="text">
+                Website Development – Crafting stunning, responsive websites that captivate and perform.
+                <br><br>
+                Custom Software – Building tailored software to streamline operations and enhance productivity.
+                <br><br>
+                Web Solutions – Diagnosing and solving complex web issues with efficiency.
+                <br><br>
+                Automation Systems – Expertise in PLC and DCS systems, ensuring smooth industrial automation.
+                <br><br>
+                Android Apps – Designing and developing Android applications that engage users and drive results.
+            </p>
+            <div class="marquee">
+                <h3>Solutions With Code!</h3>  
+            </div>
+        </div>
+    </div>
+    <div id="inner2" class="inner-section">
+        <div class="css-bg" id="container3DCSS"></div>
+        <div class="custom-container">
+          <iframe src="op.html" width="100%" height="98%" style="border: none;"></iframe>
+          <div class="custom-container-active-pointer1"></div>
+          <div class="custom-container-active-pointer2"></div>
+      </div>
+      
+    </div>
+    <div id="inner3" class="inner-section">
+      <!-- Background Element -->
+      <div class="js-bg" id="container3DJS"></div>
+    
+      <!-- Content Section -->
+      <div class="main">
+          <div class="profile-card">
+              <div class="img">
+                  <img src="https://1.bp.blogspot.com/-8c7QTLoyajs/YLjr2V6KYRI/AAAAAAAACO8/ViVPQpLWVM0jGh3RZhh-Ha1-1r3Oj62wQCNcBGAsYHQ/s16000/team-1-3.jpg">
+              </div>
+              <div class="caption">
+                  <h3>Vin Diesel</h3>
+                  <p>Senior App Developer</p>
+                  <div class="social-links">
+                      <a href="#"><i class="fab fa-facebook"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                  </div>
+              </div>
+          </div>
+          <div class="profile-card">
+              <div class="img">
+                  <img src="https://1.bp.blogspot.com/-vhmWFWO2r8U/YLjr2A57toI/AAAAAAAACO4/0GBonlEZPmAiQW4uvkCTm5LvlJVd_-l_wCNcBGAsYHQ/s16000/team-1-2.jpg">
+              </div>
+              <div class="caption">
+                  <h3>David Corner</h3>
+                  <p>Front End Developer</p>
+                  <div class="social-links">
+                      <a href="#"><i class="fab fa-facebook"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                  </div>
+              </div>
+          </div>
+          <div class="profile-card">
+              <div class="img">
+                  <img src="https://1.bp.blogspot.com/-AO5j2Y9lzME/YLjr3mxiqAI/AAAAAAAACPE/KAaYYTtQTrgBE3diTbxGoc4U4fCGx-C2gCNcBGAsYHQ/s16000/team-1-4.jpg">
+              </div>
+              <div class="caption">
+                  <h3>Tom Cruise</h3>
+                  <p>Full Stack Developer</p>
+                  <div class="social-links">
+                      <a href="#"><i class="fab fa-facebook"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    
+  
+</div>
+<div id="section3" class="section">
+  <iframe src="Ur.html" width="100%" height="98%" class="but23"></iframe>
+<div class="scroll-ale-pate1"></div>
+<div class="scroll-ale-pate2"></div>
+<div class="scroll-ale-pate3"></div>
+<div class="scroll-ale-pate4"></div>
+</div>
+<script>
+   let currentSection = 1; // Track the current main section
+const section2 = document.getElementById("section2"); // Section 2 container
+const innerSections = section2.querySelectorAll(".inner-section"); // Inner sections in Section 2
+let currentInnerIndex = 0; // Track the current inner section within Section 2
+let isScrolling = false; // Prevent overlapping scroll events
+
+const scrollDuration = 800; // Duration of smooth scrolling (in ms)
+
+// Helper function to check if an element is fully visible
+const isFullyVisible = (element) => {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.bottom <= window.innerHeight * 1.1 // Allow some margin for zoom adjustments
+    );
+};
+
+// Helper function to perform smooth scrolling to a specific element
+const scrollToElement = (element) => {
+    isScrolling = true; // Set scrolling flag to true
+    element.scrollIntoView({ behavior: "smooth", block: "start" }); // Smooth scroll
+    setTimeout(() => {
+        isScrolling = false; // Reset scrolling flag after animation ends
+    }, scrollDuration);
+};
+
+// Main scroll handler for wheel events
+window.addEventListener("wheel", (e) => {
+    if (isScrolling) return; // Ignore scroll events if already scrolling
+
+    const delta = e.deltaY; // Get scroll direction
+
+    // Section 1 -> Section 2
+    if (currentSection === 1 && delta > 0) {
+        scrollToElement(document.getElementById("section2"));
+        currentSection = 2; // Move to Section 2
+        currentInnerIndex = 0; // Reset to the first inner section
+    } 
+    
+    // Inside Section 2: Handle inner-section scrolling
+    else if (currentSection === 2) {
+        if (delta > 0 && currentInnerIndex < innerSections.length - 1) {
+            // Scroll down to the next inner section
+            currentInnerIndex++;
+            scrollToElement(innerSections[currentInnerIndex]);
+        } else if (delta < 0 && currentInnerIndex > 0) {
+            // Scroll up to the previous inner section
+            currentInnerIndex--;
+            scrollToElement(innerSections[currentInnerIndex]);
+        } else if (delta > 0 && currentInnerIndex === innerSections.length - 1) {
+            // If at the last inner-section, move to Section 3
+            if (isFullyVisible(innerSections[currentInnerIndex])) {
+                scrollToElement(document.getElementById("section3"));
+                currentSection = 3;
+            }
+        } else if (delta < 0 && currentInnerIndex === 0) {
+            // If at the first inner-section, move back to Section 1
+            if (isFullyVisible(innerSections[currentInnerIndex])) {
+                scrollToElement(document.getElementById("section1"));
+                currentSection = 1;
+            }
+        }
+    }
+
+    // Section 3 -> Section 2
+    else if (currentSection === 3 && delta < 0) {
+        scrollToElement(document.getElementById("section2"));
+        currentSection = 2; // Move to Section 2
+        currentInnerIndex = innerSections.length - 1; // Start at the last inner section
+    }
+});
+
+// Ensure correct alignment on window resize
+window.addEventListener("resize", () => {
+    const activeSection =
+        currentSection === 1
+            ? document.getElementById("section1")
+            : currentSection === 2
+            ? innerSections[currentInnerIndex]
+            : document.getElementById("section3");
+    scrollToElement(activeSection);
+});
+
+// Ensure correct alignment on page load
+window.addEventListener("load", () => {
+    currentSection = 1; // Start at Section 1
+    scrollToElement(document.getElementById("section1"));
+});
+
+</script>
+  
+ <script type="module">
+  import * as THREE from "https://cdn.skypack.dev/three@0.129.0/build/three.module.js";
+  import { OrbitControls } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/controls/OrbitControls.js";
+  
+  function createGradientTexture(color1, color2) {
+    const size = 512;
+    const canvas = document.createElement('canvas');
+    canvas.width = size;
+    canvas.height = size;
+    const context = canvas.getContext('2d');
+  
+    const gradient = context.createLinearGradient(0, 0, size, size);
+    gradient.addColorStop(0, color1);
+    gradient.addColorStop(1, color2);
+  
+    context.fillStyle = gradient;
+    context.fillRect(0, 0, size, size);
+  
+    const texture = new THREE.CanvasTexture(canvas);
+    return texture;
+  }
+  
+  function createLogo(containerId, text, gradientColors, textSize = 0.45) {
+    // Scene setup
+    const scene = new THREE.Scene();
+  
+    // Camera setup
+    const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera.position.set(0, 2, 6);
+  
+    // Renderer setup
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(window.devicePixelRatio);
+    document.getElementById(containerId).appendChild(renderer.domElement);
+  
+    // OrbitControls setup
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.05;
+    controls.enableZoom = false;
+    controls.enablePan = false;
+    controls.enableRotate = true;
+    controls.update();
+  
+    // Lighting setup
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
+    scene.add(ambientLight);
+  
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+    directionalLight.position.set(5, 10, 7.5);
+    scene.add(directionalLight);
+  
+    // Create the logo shape
+    const logoGroup = new THREE.Group();
+  
+    // Shield shape
+    const shieldShape = new THREE.Shape();
+    shieldShape.moveTo(0, 1);
+    shieldShape.lineTo(0.9, 0.8);
+    shieldShape.lineTo(0.9, -0.85);
+    shieldShape.lineTo(0, -1);
+    shieldShape.lineTo(-0.9, -0.85);
+    shieldShape.lineTo(-0.9, 0.8);
+    shieldShape.lineTo(0, 1);
+  
+    const shieldExtrudeSettings = {
+      depth: 0.1,
+      bevelEnabled: true,
+      bevelThickness: 0.05,
+      bevelSize: 0.05,
+      bevelSegments: 1
+    };
+  
+    const shieldGeometry3D = new THREE.ExtrudeGeometry(shieldShape, shieldExtrudeSettings);
+    const shieldMaterial = new THREE.MeshStandardMaterial({
+      map: createGradientTexture(gradientColors[0], gradientColors[1])
+    });
+    const shieldMesh = new THREE.Mesh(shieldGeometry3D, shieldMaterial);
+    logoGroup.add(shieldMesh);
+  
+    // Add text
+    const loader = new THREE.FontLoader();
+    loader.load('https://threejs.org/examples/fonts/helvetiker_regular.typeface.json', function (font) {
+      const textGeometry = new THREE.TextGeometry(text, {
+        font: font,
+        size: textSize,
+        height: 0.1,
+        curveSegments: 12,
+        bevelEnabled: true,
+        bevelThickness: 0.05,
+        bevelSize: 0.05,
+        bevelSegments: 1
+      });
+      const textMaterial = new THREE.MeshStandardMaterial({ color: 0xD3D3D3 });
+      const textMesh = new THREE.Mesh(textGeometry, textMaterial);
+      
+      // Compute bounding box and center the text
+      textGeometry.computeBoundingBox();
+      const centerOffsetX = -0.5 * (textGeometry.boundingBox.max.x - textGeometry.boundingBox.min.x);
+      const centerOffsetY = -0.5 * (textGeometry.boundingBox.max.y - textGeometry.boundingBox.min.y);
+      textMesh.position.set(centerOffsetX, centerOffsetY, 0.1);
+      
+      logoGroup.add(textMesh);
+    });
+  
+    scene.add(logoGroup);
+  
+    // Initial position of the logo group
+    logoGroup.position.set(5, 0, -5);
+  
+    // Variables to store mouse position
+    let mouseX = 0;
+    let mouseY = 0;
+  
+    // Function to handle mouse movement
+    function onMouseMove(event) {
+      const rect = document.getElementById(containerId).getBoundingClientRect();
+      mouseX = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+      mouseY = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+    }
+  
+    // Add event listener for mouse movement
+    document.getElementById(containerId).addEventListener('mousemove', onMouseMove, false);
+  
+    // Animation loop
+    function animate() {
+      requestAnimationFrame(animate);
+  
+      // Rotate the logo group based on mouse position (only on the Y-axis for left-to-right rotation)
+      logoGroup.rotation.y += 0.01; // Continuous rotation along Y-axis
+  
+      // Move the logo group to the right side of the screen from depth (speed up the movement)
+      if (logoGroup.position.x > 0) {
+        logoGroup.position.x -= 0.15;  // Increased speed
+        logoGroup.position.z += 0.05;
+      }
+  
+      controls.update();
+      renderer.render(scene, camera);
+    }
+  
+    animate();
+  
+    // Window resize handler
+    window.addEventListener('resize', () => {
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+    });
+  
+    // Hover animation
+    document.getElementById(containerId).addEventListener('mousemove', () => {
+      gsap.to(logoGroup.position, { z: 0.2, duration: 0.5 }); // Reduced zoom effect
+    });
+  
+    document.getElementById(containerId).addEventListener('mouseout', () => {
+      gsap.to(logoGroup.position, { z: 0, duration: 0.5 });
+    });
+  }
+  
+  // Create HTML logo with gradient
+  createLogo("container3DHTML", "HTML", ["#e34f26", "#f06529"]);
+  
+  // Create CSS logo with gradient
+  createLogo("container3DCSS", "CSS", ["#264de4", "#2965f1"]);
+  
+  // Create JS logo with gradient and adjusted size
+  createLogo("container3DJS", "JS", ["#f0db4f", "#e5a228"], 0.55); // Increased text size for JS logo
+</script>
+  
+  <script>
+    // JavaScript code to make scrollbars transparent
+document.documentElement.style.setProperty('scrollbar-width', 'thin'); // For Firefox
+document.documentElement.style.setProperty('scrollbar-color', 'transparent transparent'); // For Firefox
+
+// For Webkit browsers (Chrome, Safari, etc.)
+const style = document.createElement('style');
+style.innerHTML = `
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+`;
+
+document.head.appendChild(style);
+
+    // Function to detect the device and take appropriate action
+    function detectDeviceAndHandle() {
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+  
+      // Check if the device is a mobile or tablet
+      if (/android/i.test(userAgent) || 
+          /iPad|iPhone|iPod/.test(userAgent) || 
+          /Windows Phone/i.test(userAgent) ||
+          /Mobile|Tablet/i.test(userAgent)) {
+          // Redirect to 𝓦𝓮𝓵𝓬𝓸𝓶𝓮 for mobile or tablet
+          window.location.href = "𝓦𝓮𝓵𝓬𝓸𝓶𝓮";
+      } 
+    }
+  
+    // Call the function when the page loads
+    window.onload = detectDeviceAndHandle;
+  </script>
 </body>
 </html>
