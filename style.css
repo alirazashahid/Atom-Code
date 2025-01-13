@@ -212,7 +212,6 @@ pointer-events: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow-y: auto;  /* Allow vertical scrolling */
   z-index: 30;  /* Higher z-index to overlay other elements */
 }
 
