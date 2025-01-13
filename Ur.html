@@ -97,8 +97,8 @@
             background-image: url('https://unpkg.com/feather-icons@4.28.0/dist/icons/mail.svg');
         }
 
-        button[data-icon="phone"]::after {
-            background-image: url('https://unpkg.com/feather-icons@4.28.0/dist/icons/phone.svg');
+        button[data-icon="facebook"]::after {
+            background-image: url('https://unpkg.com/feather-icons@4.28.0/dist/icons/facebook.svg');
         }
     </style>
 </head>
@@ -129,10 +129,10 @@
     </svg>
     
     <form>
-      <button type="button" aria-label="press me: message-circle icon" data-icon="message-circle"></button>
-      <button type="button" aria-label="press me: instagram icon" data-icon="instagram"></button>
+        <button type="button" aria-label="press me: message-circle icon" data-icon="message-circle" onclick="window.open('https://wa.me/923296653741?text=Hello%20Atomcode%20Team', '_blank');"></button>
+        <button type="button" aria-label="press me: instagram icon" data-icon="instagram" onclick="window.open('https://www.instagram.com/atomcodeofficial/', '_blank');"></button>
         <button type="button" aria-label="press me: mail icon" data-icon="mail"></button>
-        <button type="button" aria-label="press me: phone icon" data-icon="phone"></button>
-    </form>
+        <button type="button" aria-label="Press me: Facebook icon" data-icon="facebook" onclick="window.open('https://www.facebook.com/messages/t/328057757061969?text=Hello%20Team%20Atom%20Code', '_blank');" style="cursor: pointer; border: none; background-color: transparent;"> </button>   
+ </form>
 </body>
 </html>
