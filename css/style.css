@@ -204,6 +204,12 @@ body.dark-mode {
 }
 
 
+/* Hide cursor on mobile screens */
+@media (max-width: 768px) {
+  .cursor {
+    display: none;
+  }
+}
 
 .home-2 .heading {
   text-align: center;
