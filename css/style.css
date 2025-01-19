@@ -107,7 +107,7 @@ body.dark-mode {
   animation: liquid 7s ease-in-out infinite;
   border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   background-size: cover;
-  filter: drop-shadow(0 0 20px green);
+  filter: drop-shadow(0 0 20px #04ff00c9);
 }
 
 @keyframes liquid {
