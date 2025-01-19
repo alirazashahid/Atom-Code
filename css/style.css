@@ -45,6 +45,7 @@ body {
   position: relative;
   overflow-x: hidden;
   cursor: none;
+  
 }
 
 html {
@@ -54,6 +55,8 @@ html {
 
 body.home-rtl {
   font-family: "Tajawal", sans-serif;
+  
+
 }
 
 /* ========== start dark-mode colors ============ */
@@ -74,15 +77,63 @@ body.dark-mode {
 
   /* title 2 Color (subtitle-color) */
   --title-2-color: #ebebeb;
-  background-image:
-  radial-gradient(at 40% 20%, rgba(30, 2, 34, 0.692) 0px, transparent 50%),
-  radial-gradient(at 80% 0%, rgb(1, 25, 29) 0px, transparent 50%),
-  radial-gradient(at 0% 50%, rgb(37, 12, 0) 0px, transparent 50%),
-  radial-gradient(at 80% 50%, rgb(39, 3, 15) 0px, transparent 50%),
-  radial-gradient(at 0% 100%, rgb(8, 34, 2) 0px, transparent 50%),
-  radial-gradient(at 80% 100%, rgb(6, 5, 44) 0px, transparent 50%),
-  radial-gradient(at 0% 0%, rgb(43, 44, 4) 0px, transparent 50%);
+ background-image:
+  radial-gradient(at 35% 20%, rgba(30, 2, 34, 0.7) 0px, transparent 60%),
+  radial-gradient(at 75% 10%, rgb(1, 25, 29) 0px, transparent 60%),
+  radial-gradient(at 15% 50%, rgb(37, 12, 0) 0px, transparent 60%),
+  radial-gradient(at 70% 50%, rgb(39, 3, 15) 0px, transparent 60%),
+  radial-gradient(at 20% 90%, rgb(8, 34, 2) 0px, transparent 60%),
+  radial-gradient(at 85% 85%, rgb(6, 5, 44) 0px, transparent 60%),
+  radial-gradient(at 10% 10%, rgb(43, 44, 4) 0px, transparent 60%),
+  radial-gradient(at 60% 75%, rgba(70, 130, 180, 0.5) 0px, transparent 60%),
+  radial-gradient(at 30% 40%, rgba(255, 140, 0, 0.4) 0px, transparent 60%),
+  radial-gradient(at 50% 25%, rgba(34, 139, 34, 0.6) 0px, transparent 60%);
+
  
+}
+.shap {
+  visibility: visible;
+  opacity: 1;
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  transition: opacity 0.5s cubic-bezier(0.5, 0, 0, 1) 0.4s, transform 0.5s cubic-bezier(0.5, 0, 0, 1) 0.4s;
+}
+
+.bg-cover {
+  margin: 10vh auto;
+  height: 280px;
+  width: 280px;
+  background-image: url("code.gif");
+  -webkit-animation: liquid 7s ease-in-out infinite;
+  animation: liquid 7s ease-in-out infinite;
+  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  background-size: cover;
+  filter: drop-shadow(0 0 20px green);
+}
+
+@keyframes liquid {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+}
+
+/* Media query for small screens (mobile) */
+@media (max-width: 600px) {
+  .bg-cover {
+    display: block !important;
+  }
+}
+
+/* Default: hide the element on larger screens (PC) */
+@media (min-width: 601px) {
+  .bg-cover {
+    display: none;
+  }
 }
 
 /* Custom Scrollbar */
@@ -258,7 +309,7 @@ a:focus {
   right: 0;
   bottom: 0;
   z-index: -1;
-  background-color: var(--brand-color);
+  background-color: #0e110b38;
   transition: transform 400ms ease-in-out;
   transform: scaleX(0);
   transform-origin: left;
@@ -742,8 +793,7 @@ canvas {
 
 @media (max-width: 768px) {
   canvas {
-    left: auto; /* Remove the effect of the left property on mobile screens */
-    aspect-ratio: auto 390 / 580; /* Set the desired aspect ratio for mobile screens */
+    display: none;
   }
 }
 
@@ -1118,9 +1168,11 @@ canvas {
 /*============== Start numbers section ==========*/
 .counter-up {
   padding: 60px 0;
-  background-color: var(--dark-brand-color);
+  background-color: rgba(255, 255, 255, 0.048);
   color: #f9f9f9;
   text-align: center;
+  backdrop-filter: blur(15px);
+  box-shadow: 0px 0px 20px 1px #00000024;
 }
 
 .home-3 .counter-up {
@@ -1770,9 +1822,10 @@ canvas {
   outline: none;
   border: none;
   box-shadow: none;
-  background-color: var(--boxColor);
+  background-color: #b7b4b40f;
   border-radius: var(--border-radius);
   color: var(--title-2-color);
+  backdrop-filter:blur(15px);
 }
 
 .contact form input:focus,
