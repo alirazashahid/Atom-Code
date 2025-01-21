@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Atom Code | IT Solutions & Business Services HTML landing page template ">
+  <!-- fav icon -->
+  <link rel="icon" href="images/logo.png">
+
+  <!-- bootstarp css file -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <!-- aos.css file -->
+  <link rel="stylesheet" href="css/aos.css">
+
+  <!-- fancybox css file -->
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+  <!-- owl carousel css file -->
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+  <!--  toasts file     -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+
+  <!-- bootstrap icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+  </style>
+
+  <!-- main css file -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contact.css ">
+
+  <title>Atom Code</title>
+</head>
+
+<body class="home-1">
+  <!-- click chnage color  -->
+  <!-- Mouse Poniter  -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12"></div>
+      <div class="col-md-12"></div>
+    </div>
+  </div>
+
+  <!-- start preLoader -->
+  <div id="preloader">
+    <svg id="mainSVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+      <defs>
+        <radialGradient id="mainGrad" cx="400" cy="300" fx="400" fy="300" r="100" gradientUnits="userSpaceOnUse">
+          <stop offset=".68" stop-color="#21df51" />
+          <stop offset=".72" stop-color="#3add63" />
+          <stop offset=".77" stop-color="#4fdd73" />
+          <stop offset=".82" stop-color="#66db83" />
+          <stop offset=".88" stop-color="#7cd893" />
+          <stop offset=".93" stop-color="#95d8a6" />
+          <stop offset=".99" stop-color="#bde6c7" />
+          <stop offset="1" stop-color="#e3f1e7" />
+        </radialGradient>
+      </defs>
+      <circle id="fillDot" cx="400" cy="300" fill="#21df51" r="100" />
+      <circle id="gradDot" cx="400" cy="300" fill="url(#mainGrad)" r="100" />
+    </svg>
+  </div>
+  <!-- end preLoader -->
+
+  <!-- start scroll to top button -->
+  <div id="progress">
+    <span id="progress-value"><i class="bi bi-arrow-up-short"></i></span>
+  </div>
+  <!-- end scroll to top button -->
+
+  <!-- ======= start Header ======= -->
+  <header class="header">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="https://atomcode.tech/"><img src="images/logo/logo.png" class="logo" alt="LOGO"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list" id="menu"></i>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+          <ul class="navbar-nav ms-auto" id="navbar">
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="https://atomcode.tech/" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blogs.html">Blogs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="portfolio.html">portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Clients</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">contact us</a>
+            </li>
+          </ul>
+          <div class="d-flex ms-auto">
+            <a class="btn" href="contact.html">Order now</a>
+            <button id="mode-toggle" class="btn-light-mode switch-button"><i id="mode-icon"
+                class="bi bi-moon-fill"></i></button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- ======= end Header ======= -->
+
+  <div class="card-container">
+    <div class="contact-btn">Contact Me</div>
+    <div class="contact-form-container">
+      <a href="#" class="close-btn"><i class="fas fa-times"></i></a>
+      <form>
+        <div class="control-field"><input type="text" id="name" /><label for="name">Your Name</label></div>
+        <div class="control-field"><input type="text" id="email" /><label for="email">Email Address</label></div>
+        <div class="control-field"><input type="text" id="url" /><label for="url">Website</label></div>
+        <div class="control-field"><textarea id="message"></textarea><label for="message">Message</label></div>
+        <div class="control-field submit"><input type="submit" /></div>
+      </form>
+    </div>
+
+    <div class="card-item active" id="overview">
+      <a class="card-toggle-btn"><i class="fas fa-arrow-circle-left"></i></a>
+      <div class="card-content-container">
+        <div class="row-layout">
+          <div class="left col-half">
+            <h2>Personal <strong>Social Card</strong></h2>
+            <p>Click one of the social icons below to switch between card or click Contact Me link to show the contact form card. <br /><em>Thank you For your Visit</em></p>
+          </div>
+          <div class="right col-half"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-item" id="dribbble">
+      <a class="card-toggle-btn"><i class="fas fa-envelope"></i></a>
+      <div class="card-content-container">
+        <div class="row-layout">
+          <div class="left col-half">
+            <h2>Our <strong>Email</strong></h2>
+            <p>Email us for more information and special offers. Let us know your requirements, budget, and any specific details. For a quicker response, reach out to us directly on WhatsApp.</p>
+            <a href="https://example.com" target="_blank">Visit Profile</a>
+          </div>
+          <div class="right col-half"><img src="logo.png" alt="Logo" /></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-item" id="instagram">
+      <a class="card-toggle-btn"><i class="fab fa-instagram"></i></a>
+      <div class="card-content-container">
+        <div class="row-layout">
+          <div class="left col-half">
+            <h2>Our <strong>Instagram</strong></h2>
+            <p>Stay updated with our latest projects and innovations—follow us on Instagram! For quick support or inquiries, reach out to us on WhatsApp. We're here to help!</p>
+            <a href="https://example.com" target="_blank">Visit Profile</a>
+          </div>
+          <div class="right col-half"><img src="logo.png" alt="Logo" /></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-item" id="linkedin">
+      <a class="card-toggle-btn"><i class="fab fa-linkedin"></i></a>
+      <div class="card-content-container">
+        <div class="row-layout">
+          <div class="left col-half">
+            <h2>Our <strong>LinkedIn</strong></h2>
+            <p>Connect with us on LinkedIn to explore our latest updates and innovations. For a quicker response, reach out to us directly on WhatsApp. We're here to assist you!</p>
+            <a href="https://example.com" target="_blank">Visit Profile</a>
+          </div>
+          <div class="right col-half"><img src="logo.png" alt="Logo" /></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-item" id="youtube">
+      <a class="card-toggle-btn"><i class="fab fa-youtube"></i></a>
+      <div class="card-content-container">
+        <div class="row-layout">
+          <div class="left col-half">
+            <h2>Our <strong>Youtube</strong></h2>
+            <p>Visit our YouTube channel to see how we work and explore our videos. For a quick response, reach out to us on WhatsApp or email. We'd love to hear from you!</p>
+            <a href="https://example.com" target="_blank">Visit Profile</a>
+          </div>
+          <div class="right col-half"><img src="logo.png" alt="Logo" /></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-item" id="pinterest">
+      <a class="card-toggle-btn"><i class="fab fa-whatsapp"></i></a>
+      <div class="card-content-container">
+        <div class="row-layout">
+          <div class="left col-half">
+            <h2>Our <strong>WhatsApp</strong></h2>
+            <p>Stay connected with us on WhatsApp for instant assistance, quick responses, and personalized support. Reach out anytime to discuss your project, ask questions, or get expert guidance!</p>
+            <a href="https://example.com" target="_blank">Visit Profile</a>
+          </div>
+          <div class="right col-half"><img src="logo.png" alt="Logo" /></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-item" id="facebook">
+      <a class="card-toggle-btn"><i class="fab fa-facebook"></i></a>
+      <div class="card-content-container">
+        <div class="row-layout">
+          <div class="left col-half">
+            <h2>Our <strong>Facebook</strong></h2>
+            <p>Stay connected with us! Follow us on Facebook for the latest updates, insights, and exciting projects. For quick responses or inquiries, feel free to reach out to us on WhatsApp. </p>
+            <a href="https://example.com" target="_blank">Visit Profile</a>
+          </div>
+          <div class="right col-half"><img src="logo.png" alt="Logo" /></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-item" id="tiktok">
+      <a class="card-toggle-btn"><i class="fab fa-tiktok"></i></a> <!-- TikTok icon -->
+      <div class="card-content-container">
+        <div class="row-layout">
+          <div class="left col-half">
+            <h2>Our <strong>TikTok</strong></h2>
+            <p>Check out our TikTok for behind-the-scenes looks, creative projects, and tips on technology and innovation. Follow us for quick insights and a fresh perspective on how we work!</p>
+            <a href="https://tiktok.example.com" target="_blank">Visit TikTok</a>
+          </div>
+          <div class="right col-half"><img src="logo.png" alt="Logo" /></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card-item" id="reddit">
+      <a class="card-toggle-btn"><i class="fab fa-reddit"></i></a> <!-- Reddit icon -->
+      <div class="card-content-container">
+        <div class="row-layout">
+          <div class="left col-half">
+            <h2>Our <strong>Reddit</strong></h2>
+            <p>Join us on Reddit to dive into discussions about technology, web development, and innovative solutions. Share your ideas, ask questions, and see how we bring concepts to life!</p>
+            <a href="https://reddit.example.com" target="_blank">Visit Reddit</a>
+          </div>
+          <div class="right col-half"><img src="logo.png" alt="Logo" /></div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="card-item" id="location">
+      <a class="card-toggle-btn"><i class="fas fa-map-marker-alt"></i></a>
+      <div class="card-content-container">
+        <div class="row-layout">
+          <div class="left col-half">
+            <h2>Our <strong>Location</strong></h2>
+            <p>Visit the Atomcode office in Rahim Yar Khan for expert guidance on web development, software solutions, and tech innovations. We’re here to bring your ideas to life—let’s create together!</p>
+            <a href="https://example.com" target="_blank">Visit Profile</a>
+          </div>
+          <div class="right col-half"><img src="logo.png" alt="Logo" /></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card-item" id="twitter">
+      <a class="card-toggle-btn"><i class="fab fa-x-twitter"></i></a>
+      <div class="card-content-container">
+        <div class="row-layout">
+          <div class="left col-half">
+            <h2>Our <strong>Twitter</strong></h2>
+            <p>Follow us on X.com for the latest updates, tech insights, and innovation news! Stay connected with Atomcode for exciting projects, tips, and more. Let’s grow and create together!</p>
+            <a href="https://example.com" target="_blank">Visit Profile</a>
+          </div>
+          <div class="right col-half"><img src="logo.png" alt="Logo" /></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(".card-toggle-btn").on("click", function () {
+      if ($(this).hasClass("active") || $(".card-toggle-btn").is(":animated")) {
+        return; // Prevent clicking while animations are ongoing or the button is already active
+      }
+  
+      // Mark animation as ongoing to prevent multiple triggers
+      var isAnimating = true;
+  
+      // Remove active class from all buttons and reset their states
+      $(".card-toggle-btn").removeClass("active");
+      $(this).addClass("active");
+  
+      // Reset the z-index and active class from previous items
+      $(".card-item").find(".card-content-container").css("z-index", 0);
+      $(".card-item").removeClass("active");
+  
+      // Ensure the clicked button's content container is visible and on top
+      var that = $(this);
+      $(this).siblings().css("z-index", 1);
+  
+      setTimeout(function () {
+        // Toggle active class for the corresponding card content
+        that.parent().toggleClass("active").find(".card-content-container").on("transitionend", function () {
+          // Set animation flag to false when the transition is done
+          isAnimating = false;
+        });
+      }, 10);
+    });
+  
+    // Handle input blur events for form fields
+    $("input,textarea").blur(function () {
+      if ($(this).val()) {
+        $(this).parent().addClass("filled");
+      } else {
+        $(this).parent().removeClass("filled");
+      }
+    });
+  
+    // Toggle visibility of contact form container
+    $(".contact-btn").on("click", function () {
+      $(".contact-form-container").toggleClass("active");
+    });
+  
+    $(".contact-form-container input[type=submit], .contact-form-container .close-btn").on("click", function (e) {
+      e.preventDefault();
+      $(".contact-form-container").toggleClass("active");
+    });
+  </script>
+  
+  <!--  JQuery file     -->
+  <script src="js/jquery-3.6.1.min.js"></script>
+
+  <!-- bootstrap min js -->
+  <script src="js/bootstrap.min.js"></script>
+
+  <!--  toasts file     -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+  <!--  owl carousel    -->
+  <script src="js/owl.carousel.min.js"></script>
+
+  <!-- aos file    -->
+  <script src="js/aos.js"></script>
+
+  <!-- gsap file    -->
+  <script src="js/gsap.min.js"></script>
+
+  <!--  counter     -->
+  <script src="js/jquery.counterup.min.js"></script>
+  <script src="js/jquery.waypoints.js"></script>
+
+  <!-- particles js file  -->
+  <script src="js/particles.min.js"></script>
+
+  <!-- jquery isotope file -->
+  <script src="js/isotope.min.js"></script>
+
+  <!-- jquery fancybox file -->
+  <script src="js/jquery.fancybox.min.js"></script>
+
+  <!--  Tilt.js file     -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+
+  <!--  main js file  -->
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
