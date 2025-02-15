@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Atom Code | IT Solutions & Business Services HTML landing page template ">
+  <!-- fav icon -->
+  <link rel="icon" href="images/logo.png">
+
+  <!-- bootstarp css file -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <!-- aos.css file -->
+  <link rel="stylesheet" href="css/aos.css">
+
+  <!-- fancybox css file -->
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+  <!-- owl carousel css file -->
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+  <!--  toasts file     -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+
+  <!-- bootstrap icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+  </style>
+
+  <!-- main css file -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Atom Code</title>
+</head>
+
+<body class="home-1">
+    <script>
+        // Scroll to the top of the page when it loads
+        window.onload = () => {
+          window.scrollTo(0, 0);
+        };
+      </script>
+  <!-- click chnage color  -->
+  <!-- Mouse Poniter  -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12"></div>
+      <div class="col-md-12"></div>
+    </div>
+  </div>
+
+  <!-- start preLoader -->
+  <div id="preloader">
+    <svg id="mainSVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+      <defs>
+        <radialGradient id="mainGrad" cx="400" cy="300" fx="400" fy="300" r="100" gradientUnits="userSpaceOnUse">
+          <stop offset=".68" stop-color="#21df51" />
+          <stop offset=".72" stop-color="#3add63" />
+          <stop offset=".77" stop-color="#4fdd73" />
+          <stop offset=".82" stop-color="#66db83" />
+          <stop offset=".88" stop-color="#7cd893" />
+          <stop offset=".93" stop-color="#95d8a6" />
+          <stop offset=".99" stop-color="#bde6c7" />
+          <stop offset="1" stop-color="#e3f1e7" />
+        </radialGradient>
+      </defs>
+      <circle id="fillDot" cx="400" cy="300" fill="#21df51" r="100" />
+      <circle id="gradDot" cx="400" cy="300" fill="url(#mainGrad)" r="100" />
+    </svg>
+  </div>
+  <!-- end preLoader -->
+
+  <!-- start scroll to top button -->
+  <div id="progress">
+    <span id="progress-value"><i class="bi bi-arrow-up-short"></i></span>
+  </div>
+  <!-- end scroll to top button -->
+
+  <!-- ======= start Header ======= -->
+  <header class="header">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="https://atomcode.tech/"><img src="images/logo/logo.png" class="logo" alt="LOGO"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list" id="menu"></i>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+          <ul class="navbar-nav ms-auto" id="navbar">
+        
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="https://atomcode.tech">Home</a>
+          </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blogs">Blogs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="portfolio">portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog">Clients</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact">contact us</a>
+            </li>
+          </ul>
+          <div class="d-flex ms-auto">
+            <a class="btn" href="contact">Order now</a>
+            <button id="mode-toggle" class="btn-light-mode switch-button"><i id="mode-icon"
+                class="bi bi-moon-fill"></i></button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- ======= end Header ======= -->
+  <div style="height: 50px; width: 100%;"></div>
+  <style>
+    .pricing .box {
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      position: relative;
+      height: 100%;
+    }
+  
+    .pricing .box h3.title-2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+  
+    .pricing .box h2.price {
+      font-size: 2rem;
+      color: #333;
+    }
+  
+    .pricing .box ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+  
+    .pricing .box ul li {
+      font-size: 1rem;
+      margin: 8px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .pricing .box ul li i {
+      margin-right: 8px;
+    }
+  
+    .pricing .box ul li .bi-check2-circle {
+      color: #28a745;
+    }
+  
+    .pricing .box ul li .bi-x-circle {
+      color: #dc3545;
+    }
+  
+    .pricing .box .btn {
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  </style>
+  
+  <!-- ============== Start Pricing Section ========== -->
+  <section class="container pricing py-5" id="pricing">
+    <div class="heading">
+      <span class="pretitle" data-aos="fade-up">Pricing</span>
+      <h2 class="title col-12" data-aos="fade-up" data-aos-delay="100">Our Pricing</h2>
+      <p class="col-lg-7 col-12" data-aos="fade-up" data-aos-delay="150">
+        Our comprehensive SEO services help you achieve higher search rankings, increased visibility, and more traffic.
+      </p>
+      <div class="row gy-4 gx-4">
+        <!-- Basic Package -->
+        <div class="col-md-6 col-lg-4 mx-auto" data-aos="fade-up" data-aos-delay="200">
+          <div class="box">
+            <h3 class="my-2 title-2">Basic Package</h3>
+            <h2 class="price">$200</h2>
+            <ul class="my-4">
+              <li>Keyword Research: ✓</li>
+              <li>On-Page Optimization: ✓</li>
+              <li>Monthly Reports: ✓</li>
+              <li>Content Optimization: ✗</li>
+              <li>Link Building: ✗</li>
+              <li>Local SEO: ✗</li>
+              <li>Technical SEO: ✗</li>
+            </ul>
+            <a href="#" class="btn my-4">Start Now</a>
+          </div>
+        </div>
+  
+        <!-- Standard Package -->
+        <div class="col-md-6 col-lg-4 mx-auto" data-aos="fade-up" data-aos-delay="250">
+          <div class="box">
+            <h3 class="my-2 title-2">Standard Package</h3>
+            <h2 class="price">$500</h2>
+            <ul class="my-4">
+              <li>Keyword Research: ✓</li>
+              <li>On-Page Optimization: ✓</li>
+              <li>Monthly Reports: ✓</li>
+              <li>Content Optimization: ✓</li>
+              <li>Link Building: ✓</li>
+              <li>Local SEO: ✓</li>
+              <li>Technical SEO: ✗</li>
+            </ul>
+            <a href="#" class="btn my-4">Start Now</a>
+          </div>
+        </div>
+  
+        <!-- Professional Package -->
+        <div class="col-md-6 col-lg-4 mx-auto" data-aos="fade-up" data-aos-delay="300">
+          <div class="box">
+            <h3 class="my-2 title-2">Professional Package</h3>
+            <h2 class="price">$1,000</h2>
+            <ul class="my-4">
+              <li>Keyword Research: ✓</li>
+              <li>On-Page Optimization: ✓</li>
+              <li>Monthly Reports: ✓</li>
+              <li>Content Optimization: ✓</li>
+              <li>Link Building: ✓</li>
+              <li>Local SEO: ✓</li>
+              <li>Technical SEO: ✓</li>
+              <li>SEO Audits: ✓</li>
+            </ul>
+            <a href="#" class="btn my-4">Start Now</a>
+          </div>
+        </div>
+  
+        <!-- Premium Package -->
+        <div class="col-md-6 col-lg-4 mx-auto" data-aos="fade-up" data-aos-delay="350">
+          <div class="box">
+            <h3 class="my-2 title-2">Premium Package</h3>
+            <h2 class="price">$2,000</h2>
+            <ul class="my-4">
+              <li>Keyword Research: ✓</li>
+              <li>On-Page Optimization: ✓</li>
+              <li>Monthly Reports: ✓</li>
+              <li>Content Optimization: ✓</li>
+              <li>Link Building: ✓</li>
+              <li>Local SEO: ✓</li>
+              <li>Technical SEO: ✓</li>
+              <li>SEO Audits: ✓</li>
+              <li>Competitor Analysis: ✓</li>
+              <li>Advanced Analytics: ✓</li>
+            </ul>
+            <a href="#" class="btn my-4">Start Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ============== End Pricing Section ========== -->
+  <!-- ============== Start Footer section ========== -->
+  <div class="footer">
+    <div class="container">
+      <div class="row justify-content-center align-items-center g-4">
+        <div class="col-12 col-lg-3 col-md-6 mx-auto my-4">
+          <div
+            class="box d-flex flex-column justify-content-md-start justify-content-lg-start justify-content-center align-items-center align-items-lg-start align-items-md-start">
+            <a href="#" class="logo "><img class="my-2" src="images/logo/logo.png" alt=""></a>
+            <p>Lorem ipsum dolor sit amet
+              aspernatur exercitationem fugiat.</p>
+            <h4 class="my-2">
+              follow us
+            </h4>
+            <div class="social d-flex gap-2">
+              <div class="icon"><i class="bi bi-facebook"></i></div>
+              <div class="icon"><i class="bi bi-instagram"></i></div>
+              <div class="icon"><i class="bi bi-twitter-x "></i></div>
+              <div class="icon"><i class="bi bi-youtube"></i></div>
+            </div>
+          </div>
+        </div>
+            <!-- start inner part2 footer -->
+        <div
+          class=" news col-12 col-lg-3 col-md-6 mx-auto d-flex flex-column justify-content-md-start justify-content-lg-start justify-content-center align-items-center align-items-lg-start align-items-md-start my-4 gap-3">
+          <h4>site map</h4>
+          <ul class="d-flex flex-column gap-3">
+            <li class="d-flex align-items-center gap-2"><i class="bi bi-chevron-right"></i><a href="index">home</a>
+            </li>
+            <li class="d-flex align-items-center gap-2"><i class="bi bi-chevron-right"></i><a
+                href="about">about</a></li>
+            <li class="d-flex align-items-center gap-2"><i class="bi bi-chevron-right"></i><a
+                href="services">services</a></li>
+            <li class="d-flex align-items-center gap-2"><i class="bi bi-chevron-right"></i><a
+                href="contact">contact</a></li>
+          </ul>
+        </div>
+        <div
+          class=" news col-12 col-lg-3 col-md-6 mx-auto d-flex flex-column justify-content-md-start justify-content-lg-start justify-content-center align-items-center align-items-lg-start align-items-md-start my-4 gap-3">
+          <h4>follow us</h4>
+          <ul class="d-flex flex-column gap-3">
+            <li class="d-flex align-items-center gap-2"><i class="bi bi-chevron-right"></i><a href="#">facebook</a>
+            </li>
+            <li class="d-flex align-items-center gap-2"><i class="bi bi-chevron-right"></i><a href="#">instagram</a>
+            </li>
+            <li class="d-flex align-items-center gap-2"><i class="bi bi-chevron-right"></i><a href="#">linkedin</a></li>
+            <li class="d-flex align-items-center gap-2"><i class="bi bi-chevron-right"></i><a href="#">x</a></li>
+          </ul>
+        </div>
+        <div
+          class=" news col-12 col-lg-3 col-md-6 mx-auto d-flex flex-column justify-content-md-start justify-content-lg-start justify-content-center align-items-center align-items-lg-start align-items-md-start my-4 gap-3">
+          <h4>our services</h4>
+          <ul class="d-flex flex-column gap-3">
+            <li class="d-flex align-items-center gap-2"><i class="bi bi-chevron-right"></i><a href="#">digital
+                marketing</a>
+            </li>
+            <li class="d-flex align-items-center gap-2"><i class="bi bi-chevron-right"></i><a href="#">web
+                developement</a>
+            </li>
+            <li class="d-flex align-items-center gap-2"><i class="bi bi-chevron-right"></i><a href="#">cyber
+                security</a></li>
+            <li class="d-flex align-items-center gap-2"><i class="bi bi-chevron-right"></i><a href="#">graphic
+                design</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- end inner part2 footer -->
+    <hr>
+    <div class="copyrights ">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 d-flex justify-content-lg-start justify-content-md-start justify-content-center">
+            <p class="creadits">
+              &copy; 2024
+              Created by: <a href="#">Atom Code</a>
+            </p>
+          </div>
+          <div
+            class="col-12 col-md-6 d-flex justify-content-lg-end justify-content-md-end justify-content-center pb-md-0 pb-md-0 pb-lg-0 pb-3">
+            <div>
+              <a href="terms-of-use">Terms of Use </a>
+              | <a href="privacy-policy">Privacy Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ============== end Footer section ========== -->
+
+  <!--  JQuery file     -->
+  <script src="js/jquery-3.6.1.min.js"></script>
+
+  <!-- bootstrap min js -->
+  <script src="js/bootstrap.min.js"></script>
+
+  <!--  toasts file     -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+  <!--  owl carousel    -->
+  <script src="js/owl.carousel.min.js"></script>
+
+  <!-- aos file    -->
+  <script src="js/aos.js"></script>
+
+  <!-- gsap file    -->
+  <script src="js/gsap.min.js"></script>
+
+  <!--  counter     -->
+  <script src="js/jquery.counterup.min.js"></script>
+  <script src="js/jquery.waypoints.js"></script>
+
+  <!-- particles js file  -->
+  <script src="js/particles.min.js"></script>
+
+  <!-- jquery isotope file -->
+  <script src="js/isotope.min.js"></script>
+
+  <!-- jquery fancybox file -->
+  <script src="js/jquery.fancybox.min.js"></script>
+
+  <!--  Tilt.js file     -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+
+  <!--  main js file  -->
+  <script src="js/main.js"></script>
+
+
+</body>
+
+</html>

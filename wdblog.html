@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Dive deep into the world of web development with this comprehensive guide exploring technologies, tools, and best practices.">
+    <meta name="keywords" content="Web Development, HTML, CSS, JavaScript, Full-Stack, Front-End, Back-End, Guide, SEO">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Open Graph Meta Tags for social sharing -->
+    <meta property="og:title" content="The Comprehensive Guide to Web Development">
+    <meta property="og:description" content="Building the Digital World: Explore the technologies, tools, and practices that developers use to craft digital experiences.">
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Comprehensive Guide to Web Development">
+    <meta name="twitter:description" content="An in-depth exploration of web development technologies and practices.">
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Schema.org structured data for rich snippets -->
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Atom Code | IT Solutions & Business Services HTML landing page template ">
+  <!-- fav icon -->
+  <link rel="icon" href="images/logo.png">
+
+  <!-- bootstarp css file -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <!-- aos.css file -->
+  <link rel="stylesheet" href="css/aos.css">
+
+  <!-- fancybox css file -->
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+  <!-- owl carousel css file -->
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+  <!--  toasts file     -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+
+  <!-- bootstrap icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+  </style>
+
+  <!-- main css file -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/about.css ">
+
+  <title>Atom Code</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "The Comprehensive Guide to Web Development: Building the Digital World",
+      "image": "https://yourdomain.com/images/web-development-guide.jpg",
+      "author": {
+        "@type": "Person",
+        "name": "Your Name"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Your Blog Name",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://yourdomain.com/images/logo.png"
+        }
+      },
+      "datePublished": "2023-11-01",
+      "description": "A detailed guide covering the essentials of web development.",
+      "articleBody": "..."
+    }
+    </script>
+    <style>
+  
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+article {
+    flex: 3;
+    background: #ffffff1c;
+    padding: 20px;
+    margin-right: 20px;
+    box-shadow: 0 0 16px 5px rgb(0 0 0 / 42%);
+    border-radius: 10px;
+}
+
+article h2, article h3 {
+    color: #009dff;
+    text-shadow: 0px 0px 5px #009dff;
+}
+
+article p {
+    margin: 10px 0;
+}
+
+article ul {
+    margin: 10px 0;
+    padding: 0;
+    list-style: disc inside;
+}
+
+article ul li {
+    margin-left: 20px;
+}
+
+/* Aside Styles */
+aside {
+    flex: 1;
+    background: #ffffff1c;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+aside h3 {
+    color: #009dff;
+}
+
+aside ul {
+    padding: 0;
+    list-style: none;
+}
+
+aside ul li {
+    margin-bottom: 10px;
+}
+
+aside ul li a {
+    text-decoration: none;
+    color: #35424a;
+}
+
+aside ul li a:hover {
+    color: #e8491d;
+}
+a{
+    color: green;
+}
+    </style>
+</head>
+<body>
+   <!-- click chnage color  -->
+  <!-- Mouse Poniter  -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12"></div>
+      <div class="col-md-12"></div>
+    </div>
+  </div>
+
+  <!-- start preLoader -->
+  <div id="preloader">
+    <svg id="mainSVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+      <defs>
+        <radialGradient id="mainGrad" cx="400" cy="300" fx="400" fy="300" r="100" gradientUnits="userSpaceOnUse">
+          <stop offset=".68" stop-color="#21df51" />
+          <stop offset=".72" stop-color="#3add63" />
+          <stop offset=".77" stop-color="#4fdd73" />
+          <stop offset=".82" stop-color="#66db83" />
+          <stop offset=".88" stop-color="#7cd893" />
+          <stop offset=".93" stop-color="#95d8a6" />
+          <stop offset=".99" stop-color="#bde6c7" />
+          <stop offset="1" stop-color="#e3f1e7" />
+        </radialGradient>
+      </defs>
+      <circle id="fillDot" cx="400" cy="300" fill="#21df51" r="100" />
+      <circle id="gradDot" cx="400" cy="300" fill="url(#mainGrad)" r="100" />
+    </svg>
+  </div>
+  <!-- end preLoader -->
+
+  <!-- start scroll to top button -->
+  <div id="progress">
+    <span id="progress-value"><i class="bi bi-arrow-up-short"></i></span>
+  </div>
+  <!-- end scroll to top button -->
+
+  <!-- ======= start Header ======= -->
+  <header class="header">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="https://atomcode.tech/"><img src="images/logo/logo.png" class="logo" alt="LOGO"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list" id="menu"></i>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+          <ul class="navbar-nav ms-auto" id="navbar">
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="https://atomcode.tech">Home</a>
+          </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blogs">Blogs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="portfolio">portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog">Clients</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact">contact us</a>
+            </li>
+          </ul>
+          <div class="d-flex ms-auto">
+            <a class="btn" href="contact">Order now</a>
+            <button id="mode-toggle" class="btn-light-mode switch-button"><i id="mode-icon"
+                class="bi bi-moon-fill"></i></button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div style="height: 20px; width: 100%;"></div>
+  </header>
+    <main>
+        <article>
+            <section>
+                <h2>Introduction</h2>
+                <p>In the digital age, the web has become an integral part of our daily lives. From social networking and online shopping to accessing information and cloud-based applications, the web is the backbone that powers our connected world. But what exactly goes into creating the websites and applications we interact with every day? This comprehensive guide delves into the world of web development, exploring the technologies, tools, and practices that developers use to build the digital experiences we rely on.</p>
+            </section>
+            <section>
+                <h2>Understanding the Web: A Brief Overview</h2>
+                <p>At its core, the web is a vast network of interconnected computers communicating through standardized protocols. When you access a website, your browser sends a request to a server where the site's files are stored. The server processes this request and sends back the necessary resources, which your browser then interprets and displays. This client-server model is the foundation upon which web development is built.</p>
+            </section>
+            <section>
+                <h2>Front-End Development: Crafting the User Experience</h2>
+                <h3>HTML: The Structure</h3>
+                <p>HyperText Markup Language (HTML) is the standard markup language used to create the structure of web pages. It uses a system of tags to define elements like headings, paragraphs, links, and images. Think of HTML as the skeleton of a website, providing the necessary framework.</p>
+                <h3>CSS: The Style</h3>
+                <p>Cascading Style Sheets (CSS) control the presentation of HTML elements. It allows developers to specify colors, fonts, layouts, and responsive designs. CSS brings the structure to life, transforming the raw HTML into a visually appealing interface.</p>
+                <h3>JavaScript: The Interactivity</h3>
+                <p>JavaScript (JS) is a scripting language that enables dynamic content and interactive features. It can manipulate HTML and CSS in real-time, responding to user actions like clicks and keystrokes. JavaScript turns static pages into interactive experiences, such as slideshows, form validations, and dynamic content updates.</p>
+                <h3>Front-End Frameworks and Libraries</h3>
+                <p><strong>React:</strong> A JavaScript library developed by Facebook for building user interfaces with reusable components.</p>
+                <p><strong>Angular:</strong> A TypeScript-based framework maintained by Google for building complex single-page applications (SPAs).</p>
+                <p><strong>Vue.js:</strong> A progressive framework for building user interfaces, known for its simplicity and flexibility.</p>
+                <p>These tools streamline development by providing structured approaches and pre-built functionalities.</p>
+            </section>
+            <section>
+                <h2>Back-End Development: Powering the Behind-the-Scenes</h2>
+                <p>Back-end development involves the server-side logic that powers websites and applications. It focuses on databases, servers, APIs, and application logic.</p>
+                <h3>Server-Side Languages and Frameworks</h3>
+                <p><strong>Node.js (JavaScript):</strong> Allows JavaScript to run on the server, making it possible to use a single language for both front-end and back-end development.</p>
+                <p><strong>Express.js:</strong> A minimalistic framework for building web applications with Node.js.</p>
+                <p><strong>Python:</strong></p>
+                <p><strong>Django:</strong> A high-level framework that encourages rapid development and clean, pragmatic design.</p>
+                <p><strong>Flask:</strong> A micro-framework for lightweight applications.</p>
+                <p><strong>Ruby:</strong></p>
+                <p><strong>Ruby on Rails:</strong> Emphasizes convention over configuration, making development faster and more efficient.</p>
+                <p><strong>PHP:</strong></p>
+                <p>Often used with content management systems like WordPress and frameworks like Laravel.</p>
+                <h3>Databases</h3>
+                <p><strong>Relational Databases (SQL):</strong></p>
+                <p>MySQL, PostgreSQL, Oracle: Use structured query language (SQL) to define and manipulate data.</p>
+                <p><strong>Non-Relational Databases (NoSQL):</strong></p>
+                <p>MongoDB, Cassandra, Redis: Handle unstructured data, offering flexibility in data models.</p>
+                <h3>APIs and Web Services</h3>
+                <p><strong>RESTful APIs:</strong> Use HTTP requests to GET, POST, PUT, and DELETE data.</p>
+                <p><strong>GraphQL:</strong> A query language for APIs that allows clients to request exactly what they need.</p>
+                <h3>Microservices Architecture</h3>
+                <p>Breaks applications into small, independent services that communicate over APIs.</p>
+                <p>Enhances scalability and maintainability by allowing individual services to be developed and deployed separately.</p>
+            </section>
+            <section>
+                <h2>Full-Stack Development: The Best of Both Worlds</h2>
+                <p>Full-stack developers are proficient in both front-end and back-end technologies.</p>
+                <h3>Popular Technology Stacks</h3>
+                <p><strong>LAMP Stack:</strong></p>
+                <p>Linux, Apache, MySQL, PHP/Python/Perl.</p>
+                <p>Traditional and widely used for web hosting.</p>
+                <p><strong>MEAN Stack:</strong></p>
+                <p>MongoDB, Express.js, Angular, Node.js.</p>
+                <p>Full-stack JavaScript solution.</p>
+                <p><strong>MERN Stack:</strong></p>
+                <p>Similar to MEAN, but uses React instead of Angular.</p>
+                <h3>Benefits:</h3>
+                <p>Ability to handle all aspects of development.</p>
+                <p>Streamlined communication and development processes.</p>
+            </section>
+            <section>
+                <h2>DevOps and Deployment: Bringing Your Site to the World</h2>
+                <p>Deployment involves getting your website or application live and accessible to users.</p>
+                <h3>Version Control Systems</h3>
+                <p><strong>Git:</strong> Tracks changes in code, facilitates collaboration.</p>
+                <p>Platforms like GitHub, GitLab, and Bitbucket host repositories and offer collaboration tools.</p>
+                <h3>Continuous Integration/Continuous Deployment (CI/CD)</h3>
+                <p><strong>CI:</strong> Automatically testing and merging code changes.</p>
+                <p><strong>CD:</strong> Automatically deploying code changes to production.</p>
+                <p>Tools like Jenkins, Travis CI, and CircleCI automate these processes.</p>
+                <h3>Hosting and Cloud Services</h3>
+                <p><strong>Infrastructure as a Service (IaaS):</strong> Amazon Web Services (AWS), Google Cloud Platform (GCP), Microsoft Azure.</p>
+                <p><strong>Platform as a Service (PaaS):</strong> Heroku, Elastic Beanstalk.</p>
+                <h3>Containerization:</h3>
+                <p><strong>Docker:</strong> Packages applications into containers for consistent deployment.</p>
+                <p><strong>Kubernetes:</strong> Orchestrates containerized applications across clusters of machines.</p>
+            </section>
+            <section>
+                <h2>Modern Web Development Trends</h2>
+                <p>The web development landscape is constantly evolving, with new technologies and methodologies emerging.</p>
+                <h3>Progressive Web Apps (PWAs)</h3>
+                <p>Combine the best of web and mobile apps.</p>
+                <h3>Features:</h3>
+                <p>Offline access.</p>
+                <p>Push notifications.</p>
+                <p>Installable on home screens without app stores.</p>
+                <h3>Single Page Applications (SPAs)</h3>
+                <p>Load a single HTML page and dynamically update content.</p>
+                <p>Provide a seamless user experience similar to desktop applications.</p>
+                <p>Frameworks like React, Angular, and Vue.js facilitate SPA development.</p>
+                <h3>Serverless Architecture</h3>
+                <p>Allows developers to build and run applications without managing infrastructure.</p>
+                <p>Providers handle server management, scaling, and maintenance.</p>
+                <p>Services like AWS Lambda, Azure Functions, and Google Cloud Functions.</p>
+                <h3>WebAssembly</h3>
+                <p>A low-level bytecode that runs in the browser.</p>
+                <p>Enables high-performance applications written in languages like C++ or Rust.</p>
+                <p>Expands web capabilities beyond JavaScript.</p>
+            </section>
+            <section>
+                <h2>Best Practices in Web Development</h2>
+                <h3>Responsive and Mobile-First Design</h3>
+                <p><strong>Responsive Design:</strong> Ensures websites function across various devices and screen sizes.</p>
+                <p><strong>Mobile-First Approach:</strong> Designing for mobile devices first, then scaling up for larger screens.</p>
+                <h3>Accessibility</h3>
+                <p>Making websites usable for people with disabilities.</p>
+                <p>Implementing semantic HTML, alt text for images, and proper ARIA roles.</p>
+                <p>Compliance with standards like WCAG (Web Content Accessibility Guidelines).</p>
+                <h3>Performance Optimization</h3>
+                <p><strong>Minification:</strong> Reducing file sizes of HTML, CSS, and JavaScript.</p>
+                <p><strong>Code Splitting:</strong> Loading only necessary code for the current page.</p>
+                <p><strong>Caching:</strong> Storing data locally to reduce server requests.</p>
+                <h3>Security Best Practices</h3>
+                <p><strong>Input Validation:</strong> Preventing SQL injection and cross-site scripting (XSS).</p>
+                <p><strong>Authentication and Authorization:</strong> Secure login systems, permissions management.</p>
+                <p><strong>HTTPS and SSL Certificates:</strong> Encrypting data in transit.</p>
+                <p>Regularly updating dependencies and monitoring for vulnerabilities.</p>
+            </section>
+            <section>
+                <h2>The Importance of Continuous Learning</h2>
+                <p>Web development is a field characterized by rapid change. Staying up-to-date with the latest tools, frameworks, and best practices is crucial.</p>
+                <h3>Resources for Learning</h3>
+                <p><strong>Online Tutorials and Courses:</strong> Platforms like Coursera, Udemy, and freeCodeCamp.</p>
+                <p><strong>Documentation and Guides:</strong> Official docs for languages and frameworks.</p>
+                <h3>Community Involvement:</h3>
+                <p>Participate in forums like Stack Overflow.</p>
+                <p>Attend local meetups and conferences.</p>
+                <h3>Building Projects</h3>
+                <p>Apply knowledge by building personal projects.</p>
+                <p>Contribute to open-source projects to gain experience and collaborate with others.</p>
+            </section>
+            <section>
+                <h2>Conclusion</h2>
+                <p>Web development is a dynamic and rewarding field that brings ideas to life on the digital stage. Whether you're drawn to the visual creativity of front-end development, the logical problem-solving of back-end programming, or the holistic approach of full-stack development, there's a place for you in this ever-evolving landscape.</p>
+                <p>By embracing continuous learning and keeping pace with emerging technologies, you can build innovative and impactful web experiences that shape the way we interact with the world. The web is a canvas with limitless possibilities—what will you create?</p>
+                <p>Ready to embark on your web development journey? Explore the resources below to kickstart your learning.</p>
+            </section>
+            <section>
+                <h2>Additional Resources</h2>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/" target="_blank">Mozilla Developer Network (MDN)</a>: Comprehensive documentation and tutorials.</li>
+                    <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a>: Beginner-friendly tutorials on web technologies.</li>
+                    <li><a href="https://github.com/" target="_blank">GitHub</a>: Explore code repositories and collaborate with other developers.</li>
+                    <li><a href="https://web.dev/" target="_blank">Web.dev</a>: Google's resource for learning about web development best practices.</li>
+                </ul>
+            </section>
+        </article>
+       
+    </main>
+    <div style="height: 20px; width: 100%;"></div>
+
+
+  <!-- ============== Start Footer section ========== -->
+  <div class="footer">
+    <div class="container">
+      <div class="row justify-content-center align-items-center g-4">
+        <div class="col-12 col-lg-3 col-md-6 mx-auto my-4">
+          <div
+            class="box d-flex flex-column justify-content-md-start justify-content-lg-start justify-content-center align-items-center align-items-lg-start align-items-md-start">
+            <a href="#" class="logo "><img class="my-2" src="images/logo/logo.png" alt=""></a>
+            <p>Lorem ipsum dolor sit amet
+              aspernatur exercitationem fugiat.</p>
+            <h4 class="my-2">
+              follow us
+            </h4>
+            <div class="social d-flex gap-2">
+              <div class="icon"><a href="https://www.facebook.com/atomcodeofficial"><i class="bi bi-facebook"></i></a></div>
+              <div class="icon"><a href="https://www.instagram.com/atomcodeofficial/"><i class="bi bi-instagram"></i></a></div>
+              <div class="icon"><a href="https://x.com/atomcodetech"><i class="bi bi-twitter-x "></i></a></div>
+              <div class="icon"><a href="https://www.youtube.com/@atomcodeofficial"><i class="bi bi-youtube"></i></a></div>
+            </div>
+          </div>
+        </div>
+            <!-- start inner part2 footer -->
+        <div
+          class=" news col-12 col-lg-3 col-md-6 mx-auto d-flex flex-column justify-content-md-start justify-content-lg-start justify-content-center align-items-center align-items-lg-start align-items-md-start my-4 gap-3">
+          <h4>site map</h4>
+          <ul class="d-flex flex-column gap-3">
+            <li class="d-flex align-items-center gap-2"><i class="bi bi-chevron-right"></i><a href="https://atomcode.tech">home</a>
+            </li>
+            <li class="d-flex align-items-center gap-2"><i class="bi bi-chevron-right"></i><a
+                href="about">about</a></li>
+            <li class="d-flex align-items-center gap-2"><i class="bi bi-chevron-right"></i><a
+                href="services">services</a></li>
+            <li class="d-flex align-items-center gap-2"><i class="bi bi-chevron-right"></i><a
+                href="contact">contact</a></li>
+          </ul>
+        </div>
+        <div
+          class=" news col-12 col-lg-3 col-md-6 mx-auto d-flex flex-column justify-content-md-start justify-content-lg-start justify-content-center align-items-center align-items-lg-start align-items-md-start my-4 gap-3">
+          <h4>follow us</h4>
+          <ul class="d-flex flex-column gap-3">
+            <li class="d-flex align-items-center gap-2"><i class="bi bi-chevron-right"></i><a href="https://www.facebook.com/atomcodeofficial">facebook</a>
+            </li>
+            <li class="d-flex align-items-center gap-2"><i class="bi bi-chevron-right"></i><a href="https://www.instagram.com/atomcodeofficial/">instagram</a>
+            </li>
+            <li class="d-flex align-items-center gap-2"><i class="bi bi-chevron-right"></i><a href="https://www.linkedin.com/in/atomcode/">linkedin</a></li>
+            <li class="d-flex align-items-center gap-2"><i class="bi bi-chevron-right"></i><a href="https://x.com/atomcodetech">x</a></li>
+          </ul>
+        </div>
+        <div
+          class=" news col-12 col-lg-3 col-md-6 mx-auto d-flex flex-column justify-content-md-start justify-content-lg-start justify-content-center align-items-center align-items-lg-start align-items-md-start my-4 gap-3">
+          <h4>our services</h4>
+          <ul class="d-flex flex-column gap-3">
+            <li class="d-flex align-items-center gap-2"><i class="bi bi-chevron-right"></i><a href="service-dm">digital
+                marketing</a>
+            </li>
+            <li class="d-flex align-items-center gap-2"><i class="bi bi-chevron-right"></i><a href="service-webdevelopment">web
+                developement</a>
+            </li>
+            <li class="d-flex align-items-center gap-2"><i class="bi bi-chevron-right"></i><a href="service-cyber">cyber
+                security</a></li>
+            <li class="d-flex align-items-center gap-2"><i class="bi bi-chevron-right"></i><a href="service-gd">graphic
+                design</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- end inner part2 footer -->
+    <hr>
+    <div class="copyrights ">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 d-flex justify-content-lg-start justify-content-md-start justify-content-center">
+            <p class="creadits">
+              &copy; 2024
+              Created by: <a href="#">Atom Code</a>
+            </p>
+          </div>
+          <div
+            class="col-12 col-md-6 d-flex justify-content-lg-end justify-content-md-end justify-content-center pb-md-0 pb-md-0 pb-lg-0 pb-3">
+            <div>
+              <a href="terms-of-use">Terms of Use </a>
+              | <a href="privacy-policy">Privacy Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ============== end Footer section ========== -->
+  
+    <!--  JQuery file     -->
+    <script src="js/jquery-3.6.1.min.js"></script>
+  
+    <!-- bootstrap min js -->
+    <script src="js/bootstrap.min.js"></script>
+  
+    <!--  toasts file     -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+  
+    <!--  owl carousel    -->
+    <script src="js/owl.carousel.min.js"></script>
+  
+    <!-- aos file    -->
+    <script src="js/aos.js"></script>
+  
+    <!-- gsap file    -->
+    <script src="js/gsap.min.js"></script>
+  
+    <!--  counter     -->
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/jquery.waypoints.js"></script>
+  
+    <!-- particles js file  -->
+    <script src="js/particles.min.js"></script>
+  
+    <!-- jquery isotope file -->
+    <script src="js/isotope.min.js"></script>
+  
+    <!-- jquery fancybox file -->
+    <script src="js/jquery.fancybox.min.js"></script>
+  
+    <!--  Tilt.js file     -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+  
+    <!--  main js file  -->
+    <script src="js/main.js"></script>
+</body>
+</html>
