@@ -1,0 +1,399 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+
+* {
+    box-sizing: border-box;
+  
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+  .contact-btn {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    z-index: 6;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 15px;
+    border-radius: 20px;
+    background: rgba(0,0,0,.1);
+    line-height: 1;
+    cursor: pointer;
+    text-shadow: 0 1px 0px rgba(255,255,255,.1);
+}
+.contact-form-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(255, 255, 255, 0);
+    z-index: 5;
+    padding: 80px 50px;
+    transform: translate3d(-100%, 0, 0);
+    transition: .3s ease;
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+}
+.contact-form-container.active {
+    transform: translate3d(0,0,0);
+}
+.contact-form-container .close-btn {
+    color: rgba(0,0,0,.7);
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+.card-container {
+    margin: auto;
+    background: #fefefe04;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,.1), 3px 5px 20px rgba(0,0,0,.2);
+    width: 768px;
+    height: 550px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 30px;
+    margin-top: 100px;
+}
+.card-item {
+    display: inline-block;
+    margin-right: 20px;
+}
+.card-toggle-btn {
+    z-index: 4;
+    position: relative;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: block;
+    text-align: center;
+    line-height: 48px;
+    font-size: 24px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: .3s ease;
+}
+.card-toggle-btn.active {
+    color: white;
+    border-color: white;
+}
+.card-content-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: -webkit-clip-path 1s ease;
+    padding: 100px 0 0;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.row-layout {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+.col-half {
+    width: 50%;
+    height: 100%;
+    display: table-cell;
+    transition: .3s ease .3s;
+    transform: translate3d(0,0,0);
+    vertical-align: top;
+}
+h2 {
+    font-weight: 300;
+    font-size: 3em;
+    line-height: 1;
+    margin: 0 0 30px;
+}
+h2 strong {
+    font-weight: 700;
+    display: block;
+}
+img {
+    max-width: 90%;
+    width: 100%;
+}
+.col-half.left {
+    transform: translate3d(0,0, 0);
+    opacity: 0;
+    padding-left: 50px;
+}
+.col-half.right {
+    transform: translate3d(100px,0, 0);
+    opacity: 0;
+    padding-left: 30px;
+}
+.card-item.active .col-half {
+    transform: translate3d(0,0,0);
+    opacity: 1;
+}
+#overview .card-toggle-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    opacity: 1;
+    color: white;
+}
+#overview .card-content-container {
+    background-color: #efefef0c;
+    -webkit-clip-path: circle(0% at 91.5% 75px);
+}
+#overview.active .card-toggle-btn {
+    opacity: 0;
+}
+#overview.active .card-content-container {
+    -webkit-clip-path: circle(270% at 91.5% 75px);
+}
+#overview .right {
+    background: url(https://dl.dropboxusercontent.com/u/26808427/cdn/james.png) no-repeat bottom right;
+    background-size: contain;
+}
+#dribbble .card-content-container,#location .card-content-container ,  #github .card-content-container,  #facebook .card-content-container ,#behance .card-content-container, #linkedin .card-content-container, #pinterest .card-content-container,#youtube .card-content-container, #twitter .card-content-container {
+    color: white;
+}
+#dribbble .card-content-container p,#location .card-content-container p,  #github .card-content-container p ,#behance .card-content-container p, #linkedin .card-content-container p, #pinterest .card-content-container p, #youtube .card-content-container p, #twitter .card-content-container p {
+    color: rgba(255,255,255,.8);
+}
+#dribbble .card-content-container {
+    background-color: #9900ff25;
+    -webkit-clip-path: circle(0% at 76px 88%);
+    clip-path: circle(0% at 50px 88%);
+}
+#dribbble.active .card-content-container {
+    -webkit-clip-path: circle(270% at 76px 88%);
+    clip-path: circle(270% at 50px 88%);
+}
+#behance .card-content-container {
+    background-color: #2fd1732a;
+    -webkit-clip-path: circle(0% at 150px 88%);
+    clip-path: circle(0% at 150px 88%);
+}
+#behance.active .card-content-container {
+    -webkit-clip-path: circle(270% at 150px 88%);
+    clip-path: circle(270% at 150px 88%);
+}
+#youtube .card-content-container {
+    background-color: #9b03033b;
+    -webkit-clip-path: circle(0% at 220px 88%);
+    clip-path: circle(0% at 220px 88%);
+}
+#youtube.active .card-content-container {
+    -webkit-clip-path: circle(270% at 220px 88%);
+    clip-path: circle(270% at 220px 88%);
+}
+#linkedin .card-content-container {
+    background-color: #0218df34;
+    -webkit-clip-path: circle(0% at 220px 88%);
+    clip-path: circle(0% at 220px 88%);
+}
+#linkedin.active .card-content-container {
+    -webkit-clip-path: circle(270% at 220px 88%);
+    clip-path: circle(270% at 220px 88%);
+}
+#pinterest .card-content-container {
+    background-color: #02df3917;
+    -webkit-clip-path: circle(0% at 220px 88%);
+    clip-path: circle(0% at 220px 88%);
+}
+#pinterest.active .card-content-container {
+    -webkit-clip-path: circle(270% at 220px 88%);
+    clip-path: circle(270% at 220px 88%);
+}
+#facebook .card-content-container {
+    background-color: #dbdf0217;
+    -webkit-clip-path: circle(0% at 220px 88%);
+    clip-path: circle(0% at 220px 88%);
+}
+#facebook.active .card-content-container {
+    -webkit-clip-path: circle(270% at 220px 88%);
+    clip-path: circle(270% at 220px 88%);
+}
+#twitter .card-content-container {
+    background-color: #00000038;
+    -webkit-clip-path: circle(0% at 292px 88%);
+    clip-path: circle(0% at 292px 88%);
+}
+#twitter.active .card-content-container {
+    -webkit-clip-path: circle(270% at 292px 88%);
+    clip-path: circle(270% at 292px 88%);
+}
+#location .card-content-container {
+    background-color: #74300438;
+    -webkit-clip-path: circle(0% at 292px 88%);
+    clip-path: circle(0% at 292px 88%);
+}
+#location.active .card-content-container {
+    -webkit-clip-path: circle(270% at 292px 88%);
+    clip-path: circle(270% at 292px 88%);
+}
+#github .card-content-container {
+    background-color: #74300438;
+    -webkit-clip-path: circle(0% at 292px 88%);
+    clip-path: circle(0% at 292px 88%);
+}
+#github.active .card-content-container {
+    -webkit-clip-path: circle(270% at 292px 88%);
+    clip-path: circle(270% at 292px 88%);
+}
+form .control-field {
+    position: relative;
+    margin-bottom: 10px;
+    padding-top: 20px;
+}
+form .control-field label {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    transition: .3s ease;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+form .control-field.submit {
+    text-align: right;
+}
+input, textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #e3e3e3;
+    outline: none;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+form .filled label, input:focus + label, textarea:focus + label {
+    top: 0;
+    font-size: 12px;
+}
+textarea {
+    height: 100px;
+}
+input[type="submit"] {
+    width: auto;
+    background-color: #F06292;
+    padding: 10px 40px;
+    color: white;
+    border-radius: 40px;
+}
+
+/* hover link button */
+
+.button {
+	--w: 180px;
+	--h: 60px;
+	--icon-size: 25px;
+	--text-color: rgb(210 210 240);
+	--box-glow-color: transparent;
+	--box-glow-blur: 20px;
+	position: relative;
+	min-width: var(--w);
+	min-height: var(--h);
+	border-radius: var(--h);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	font-family: "Montserrat";
+	color: var(--text-color);
+	background: rgb(4 8 20 / 0.8);
+	box-shadow: 0 0 0 1px rgb(200 200 220 / 0.22),
+		0 0 var(--box-glow-blur) var(--box-glow-color),
+		inset 0 0 26px -10px var(--box-glow-color);
+	overflow: hidden;
+	cursor: pointer;
+	transition: box-shadow 500ms ease;
+	z-index: 2;
+}
+.button::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: rgb(200 200 220 / 0.1);
+	box-shadow: inset 0 0px 24px 0 rgb(170 230 250 / 0.12);
+	border-radius: var(--h);
+	z-index: 1;
+	transition: transform 500ms ease, box-shadow 500ms ease;
+}
+
+.text,
+.icon {
+	z-index: 2;
+}
+
+.text {
+	transform: translateX(-50%);
+	font-family: "Montserrat";
+	transition: transform 500ms ease;
+}
+
+.icon {
+	position: absolute;
+	width: var(--icon-size);
+	height: var(--icon-size);
+	left: 0;
+	transform: translateX(calc((var(--w)) / 2 + 8px));
+	transition: transform 500ms ease, color 500ms ease;
+}
+svg {
+	width: 100%;
+	height: 100%;
+	fill: currentColor;
+}
+
+.button:active {
+	--box-glow-blur: 36px;
+}
+.button:hover,
+.button:active {
+	--box-glow-color: var(--color);
+}
+.button:hover::before,
+.button:active::before {
+	transform: translateX(65%);
+	box-shadow: inset 0 0px 0px 0 transparent;
+}
+.button:hover .text,
+.button:active .text {
+	transform: translateX(0%);
+	animation-play-state: running;
+}
+.button:hover .icon,
+.button:active .icon {
+	transform: translateX(calc(var(--w) - var(--icon-size) - 19px));
+	color: var(--color);
+}
+
+.button:focus-visible {
+	outline: none;
+}
+.button:focus-visible:not(:hover, :active) {
+	--box-glow-color: rgb(114 114 114 / 0.5);
+}
+
+@media (max-width: 500px) {
+	.container {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+	}
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+a:hover {
+    color: rgb(0, 255, 0);
+}
+label{
+    color: rgba(255, 0, 0, 0.356);
+}
