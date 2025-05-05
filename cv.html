@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Raza Shahid - Professional CV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #2980b9;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #f5f7fa;
+            background-image: linear-gradient(135deg, #f5f7fa 0%, #e4e8ed 100%);
+        }
+        
+        .page-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 1000px;
+            margin: 20px auto;
+        }
+        
+        .container {
+            padding: 40px;
+            background-color: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            page-break-after: always;
+        }
+        
+        .container:last-child {
+            page-break-after: auto;
+        }
+        
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: linear-gradient(90deg, var(--accent), var(--secondary));
+        }
+        
+        /* Header Section */
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--light-gray);
+            position: relative;
+        }
+        
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-right: 30px;
+        }
+        
+        .header-content {
+            flex: 1;
+        }
+        
+        .header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 5px;
+            letter-spacing: -0.5px;
+        }
+        
+        .header h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--accent);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: var(--gray);
+            transition: all 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            color: var(--accent);
+            transform: translateX(3px);
+        }
+        
+        .contact-item i {
+            margin-right: 8px;
+            color: var(--accent);
+            font-size: 16px;
+            width: 20px;
+            text-align: center;
+        }
+        
+        /* Section Styling */
+        .section {
+            margin-bottom: 35px;
+            position: relative;
+        }
+        
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 20px;
+            position: relative;
+            padding-left: 15px;
+        }
+        
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            height: 20px;
+            width: 5px;
+            background-color: var(--accent);
+            border-radius: 3px;
+        }
+        
+        /* Summary Section */
+        .summary {
+            font-size: 15px;
+            line-height: 1.8;
+            color: var(--gray);
+            padding: 0 10px;
+        }
+        
+        .summary strong {
+            color: var(--dark);
+            font-weight: 500;
+            position: relative;
+        }
+        
+        .summary strong::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--accent);
+            opacity: 0.3;
+        }
+        
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .skill-category {
+            background-color: var(--light);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .skill-category:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .skill-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .skill-item i {
+            color: var(--accent);
+            margin-right: 10px;
+            font-size: 14px;
+            min-width: 20px;
+        }
+        
+        /* Experience & Education */
+        .experience-item, .education-item, .certification-item {
+            margin-bottom: 25px;
+            padding-left: 15px;
+            border-left: 2px solid var(--light-gray);
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .experience-item::before, .education-item::before, .certification-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--accent);
+        }
+        
+        .experience-header, .education-header, .certification-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+        
+        .job-title, .degree, .cert-name {
+            font-weight: 600;
+            color: var(--dark);
+            font-size: 17px;
+            margin-right: 10px;
+        }
+        
+        .company, .school, .cert-org {
+            font-weight: 500;
+            color: var(--accent);
+            font-size: 15px;
+        }
+        
+        .date, .location {
+            color: var(--gray);
+            font-size: 14px;
+            background-color: var(--light);
+            padding: 3px 8px;
+            border-radius: 15px;
+            display: inline-block;
+        }
+        
+        .experience-details, .project-details {
+            padding-left: 20px;
+        }
+        
+        .experience-details li, .project-details li {
+            margin-bottom: 8px;
+            font-size: 14px;
+            position: relative;
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        
+        .experience-details li::before, .project-details li::before {
+            content: '•';
+            color: var(--accent);
+            font-size: 20px;
+            position: absolute;
+            left: 0;
+            top: -3px;
+        }
+        
+        /* Projects Section */
+        .project-item {
+            margin-bottom: 25px;
+            background-color: var(--light);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .project-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .project-title {
+            font-weight: 600;
+            color: var(--dark);
+            font-size: 17px;
+        }
+        
+        .project-date {
+            color: var(--gray);
+            font-size: 14px;
+            background-color: white;
+            padding: 3px 8px;
+            border-radius: 15px;
+            display: inline-block;
+        }
+        
+        .project-description {
+            font-size: 14px;
+            margin-bottom: 12px;
+            color: var(--gray);
+        }
+        
+        /* Languages Section */
+        .languages-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+        
+        .language-item {
+            margin-bottom: 15px;
+        }
+        
+        .language-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        
+        .language {
+            font-weight: 500;
+        }
+        
+        .proficiency {
+            color: var(--gray);
+            font-size: 13px;
+        }
+        
+        .progress-bar {
+            height: 8px;
+            background-color: var(--light-gray);
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        
+        .progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent), var(--secondary));
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .progress::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, 
+                            rgba(255,255,255,0.1) 0%, 
+                            rgba(255,255,255,0.3) 50%, 
+                            rgba(255,255,255,0.1) 100%);
+            animation: shine 2s infinite;
+        }
+        
+        @keyframes shine {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        /* Additional Highlights */
+        .highlights-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .highlight-category {
+            background-color: var(--light);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .highlight-category:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .highlight-category h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            color: var(--primary);
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px dashed var(--light-gray);
+        }
+        
+        .highlight-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+        
+        .highlight-item i {
+            color: white;
+            margin-right: 12px;
+            font-size: 14px;
+            width: 25px;
+            height: 25px;
+            background-color: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .highlight-item:hover i {
+            background-color: var(--secondary);
+            transform: rotate(15deg);
+        }
+        
+        /* Floating Elements */
+        .floating-shapes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        .shape {
+            position: absolute;
+            opacity: 0.1;
+            border-radius: 50%;
+        }
+        
+        .shape-1 {
+            width: 200px;
+            height: 200px;
+            background-color: var(--accent);
+            top: -50px;
+            right: -50px;
+        }
+        
+        .shape-2 {
+            width: 150px;
+            height: 150px;
+            background-color: var(--secondary);
+            bottom: 50px;
+            left: -50px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-container {
+                padding: 0 10px;
+            }
+            
+            .container {
+                padding: 30px 20px;
+                margin: 0 auto 20px;
+            }
+            
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .profile-pic {
+                margin: 0 auto 20px;
+                width: 100px;
+                height: 100px;
+            }
+            
+            .header h1 {
+                font-size: 28px;
+            }
+            
+            .header h2 {
+                font-size: 18px;
+                margin: 0 auto 15px;
+            }
+            
+            .header h2::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .contact-info {
+                justify-content: center;
+            }
+            
+            .experience-header, .education-header, .project-header {
+                flex-direction: column;
+            }
+            
+            .date, .location, .project-date {
+                margin-top: 5px;
+            }
+        }
+        
+        /* Print Styles */
+        @media print {
+            body {
+                background: none;
+                font-size: 12pt;
+                padding: 0;
+                margin: 0;
+            }
+            
+            .page-container {
+                max-width: 100%;
+                margin: 0;
+                padding: 0;
+                gap: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                margin: 0;
+                padding: 20px;
+                max-width: 100%;
+                height: 297mm; /* A4 height */
+                border-radius: 0;
+                page-break-after: always;
+            }
+            
+            .container:last-child {
+                page-break-after: auto;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+            
+            .contact-item {
+                margin-bottom: 5px;
+            }
+            
+            .skill-category, .project-item, .highlight-category {
+                box-shadow: none;
+                border: 1px solid #eee;
+            }
+            
+            .floating-shapes {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <!-- Page 1 -->
+        <div class="container">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+            </div>
+            
+            <!-- Header Section -->
+            <header class="header">
+                <img src="https://atomcode.tech/images/team/team-4.png" alt="Ali Raza Shahid" class="profile-pic">
+                <div class="header-content">
+                    <h1>Ali Raza Shahid</h1>
+                    <h2>Office Management Professional</h2>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>03026553042, 03273217166</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>alirazashahid142p@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Dastgir Colony No. 2, Street No. 3, Rahim Yar Khan</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <span>linkedin.com/in/all-raza-shahid-a2415933a</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Professional Summary -->
+            <section class="section">
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="summary">
+                    Detail-oriented <strong>Office Management professional</strong> with certifications in administrative systems and web development. Skilled in <strong>streamlining office operations</strong>, managing documentation, and leveraging technology to enhance efficiency. Combines <strong>technical proficiency</strong> (web/app development) with strong organizational abilities to support dynamic work environments.
+                </p>
+            </section>
+            
+            <!-- Key Skills -->
+            <section class="section">
+                <h3 class="section-title">Key Skills</h3>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <div class="skill-item">
+                            <i class="fas fa-check"></i>
+                            <span><strong>Office Administration:</strong> Document management, scheduling, correspondence.</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-check"></i>
+                            <span><strong>Project Coordination:</strong> Experience managing web projects.</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-item">
+                            <i class="fas fa-check"></i>
+                            <span><strong>Technical Tools:</strong> MS Office, web development (HTML/CSS, UI/UX).</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-check"></i>
+                            <span><strong>Problem-Solving:</strong> Adaptive and creative in resolving challenges.</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <div class="skill-item">
+                            <i class="fas fa-check"></i>
+                            <span><strong>Communication:</strong> Fluent in Urdu, English, Punjabi, Hindi.</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Certifications & Training -->
+            <section class="section">
+                <h3 class="section-title">Certifications & Training</h3>
+                <div class="certification-item">
+                    <div class="certification-header">
+                        <div>
+                            <span class="cert-name">Office Management</span>
+                            <span class="cert-org">| Falcon Computer Academy</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="certification-item">
+                    <div class="certification-header">
+                        <div>
+                            <span class="cert-name">Web Development</span>
+                            <span class="cert-org">| Falcon Computer Academy</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="certification-item">
+                    <div class="certification-header">
+                        <div>
+                            <span class="cert-name">Web App Development</span>
+                            <span class="cert-org">| Microsoft Training Programs</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="certification-item">
+                    <div class="certification-header">
+                        <div>
+                            <span class="cert-name">Cybersecurity Awareness</span>
+                            <span class="cert-org">| HP Foundation</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Professional Experience -->
+            <section class="section">
+                <h3 class="section-title">Professional Experience</h3>
+                
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <span class="job-title">Office Management & Administrative Support</span>
+                            <span class="company">Freelance/Self-Employed</span>
+                        </div>
+                        <div class="date">2021–Present</div>
+                    </div>
+                    <ul class="experience-details">
+                        <li>Developed and maintained systems for efficient document organization.</li>
+                        <li>Managed schedules, emails, and client communications.</li>
+                        <li>Utilized web development skills to create tools for office automation (e.g., forms, databases).</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        
+        <!-- Page 2 -->
+        <div class="container">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+            </div>
+            
+            <!-- Professional Experience Continued -->
+            <section class="section">
+                <h3 class="section-title">Professional Experience (Continued)</h3>
+                
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <span class="job-title">Mechanical Fitter (Administrative Collaboration)</span>
+                            <span class="company">Kamoon Engineering</span>
+                        </div>
+                        <div class="date">2024</div>
+                    </div>
+                    <ul class="experience-details">
+                        <li>Assisted in project documentation and report preparation for industrial projects.</li>
+                        <li>Coordinated team schedules and safety compliance records.</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <!-- Projects -->
+            <section class="section">
+                <h3 class="section-title">Projects</h3>
+                
+                <div class="project-item">
+                    <div class="project-header">
+                        <div>
+                            <span class="project-title">Liberty University Website Upgrade</span>
+                        </div>
+                    </div>
+                    <p class="project-description">Website enhancement project for Liberty University.</p>
+                    <ul class="project-details">
+                        <li>Redesigned web pages for improved user experience, demonstrating attention to detail.</li>
+                        <li>Managed content updates and backend organization.</li>
+                    </ul>
+                </div>
+                
+                <div class="project-item">
+                    <div class="project-header">
+                        <div>
+                            <span class="project-title">Moviezoon Web Platform</span>
+                        </div>
+                        <div class="project-date">10/2024 - 11/2024</div>
+                    </div>
+                    <p class="project-description">A web platform for streaming films.</p>
+                    <ul class="project-details">
+                        <li>Developed web application similar to Netflix where users can watch films.</li>
+                        <li>Utilized various programming languages for development.</li>
+                        <li>Focused on best UI and UX practices.</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <!-- Education -->
+            <section class="section">
+                <h3 class="section-title">Education</h3>
+                <div class="education-item">
+                    <div class="education-header">
+                        <div>
+                            <span class="degree">Matriculation (Science/Biology)</span>
+                            <span class="school">Government Pilot School, Rahim Yar Khan</span>
+                        </div>
+                        <div class="date">2021</div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Languages -->
+            <section class="section">
+                <h3 class="section-title">Languages</h3>
+                <div class="languages-container">
+                    <div class="language-item">
+                        <div class="language-name">
+                            <span class="language">Urdu</span>
+                            <span class="proficiency">Native</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="language-item">
+                        <div class="language-name">
+                            <span class="language">Punjabi</span>
+                            <span class="proficiency">Native</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="language-item">
+                        <div class="language-name">
+                            <span class="language">Hindi</span>
+                            <span class="proficiency">Native</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="language-item">
+                        <div class="language-name">
+                            <span class="language">English</span>
+                            <span class="proficiency">Proficient</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="language-item">
+                        <div class="language-name">
+                            <span class="language">Saraiki</span>
+                            <span class="proficiency">Native</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="language-item">
+                        <div class="language-name">
+                            <span class="language">Sindhi</span>
+                            <span class="proficiency">Advanced</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 70%"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Additional Highlights -->
+            <section class="section">
+                <h3 class="section-title">Additional Highlights</h3>
+                <div class="highlights-container">
+                    <div class="highlight-category">
+                        <h4>Technical Proficiency</h4>
+                        <div class="highlight-item">
+                            <i class="fas fa-code"></i>
+                            <span>C++ programming</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-paint-brush"></i>
+                            <span>Graphic design</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-cogs"></i>
+                            <span>PLC systems (transferable to data management)</span>
+                        </div>
+                    </div>
+                    <div class="highlight-category">
+                        <h4>Soft Skills</h4>
+                        <div class="highlight-item">
+                            <i class="fas fa-users"></i>
+                            <span>Teamwork</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-random"></i>
+                            <span>Adaptability</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Creativity in workflow optimization</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
